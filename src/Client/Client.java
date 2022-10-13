@@ -18,7 +18,7 @@ public class Client {
             in = new DataInputStream(clientSocket.getInputStream());
             out = new DataOutputStream(clientSocket.getOutputStream());
 
-            out.writeUTF("Hello world from client");
+            out.writeUTF("Hello world from client, test");
 
             String message = in.readUTF();
             System.out.println(message);

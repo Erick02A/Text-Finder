@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se crean los mains de ambas apps">
-      <change afterPath="$PROJECT_DIR$/src/Server/Arboles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/Nodo.java" afterDir="false" />
+    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se crea la calse del arbol&#10; y los nodo de estos">
+      <change afterPath="$PROJECT_DIR$/src/Server/ComparaPalabra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Arboles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Arboles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665625277784</updated>
       <workItem from="1665625280427" duration="2504000" />
-      <workItem from="1665703301665" duration="2693000" />
+      <workItem from="1665703301665" duration="4338000" />
     </task>
     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
       <created>1665626178301</created>
@@ -77,7 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665627690203</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se crea la calse del arbol&#10; y los nodo de estos">
+      <created>1665707349042</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665707349042</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Se crea la calse del arbol&#10; y los nodo de estos">
+      <created>1665707365289</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665707365289</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se crean los mains de ambas apps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se crean los mains de ambas apps" />
+    <MESSAGE value="Se crea la calse del arbol&#10; y los nodo de estos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se crea la calse del arbol&#10; y los nodo de estos" />
   </component>
 </project>

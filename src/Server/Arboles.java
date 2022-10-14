@@ -2,6 +2,7 @@ package Server;
 
 public class Arboles {
     private Nodo raiz;
+    private String[] alfa= {"a","b",};
     public Arboles(){
         this.raiz = null;
     }

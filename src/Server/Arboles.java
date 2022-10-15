@@ -16,7 +16,7 @@ public class Arboles {
         }else {
             List<Nodo> palabras = new ArrayList<>();
             palabras.add(raiz);
-            palabras.add(new Nodo("abarca",new String[]{"archivo.txt","5"}));
+            palabras.add(new Nodo("aurelio",new String[]{"archivo.txt","5"}));
             for (Nodo n: palabras){
                 System.out.println(n.getPalabra());
             }

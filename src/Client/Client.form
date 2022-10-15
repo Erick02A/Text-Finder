@@ -5,6 +5,7 @@
       <xy x="20" y="20" width="500" height="200"/>
     </constraints>
     <properties>
+      <background color="-1052689"/>
       <maximumSize width="500" height="200"/>
       <minimumSize width="500" height="200"/>
       <name value="Text Finder"/>
@@ -12,12 +13,59 @@
     </properties>
     <border type="none"/>
     <children>
+      <hspacer id="df479">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="4.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="2c041">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="10.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <component id="8201e" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="10.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="9c751" class="javax.swing.JButton" binding="agregarButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-4849729"/>
+          <font style="3"/>
+          <foreground color="-12566464"/>
+          <hideActionText value="false"/>
+          <horizontalTextPosition value="0"/>
+          <inheritsPopupMenu value="false"/>
+          <maximumSize width="83" height="30"/>
+          <minimumSize width="83" height="30"/>
+          <preferredSize width="83" height="30"/>
+          <text value="Agregar"/>
+        </properties>
+      </component>
       <component id="a8b26" class="javax.swing.JButton" binding="eliminarButton" default-binding="true">
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
+          <background color="-20047"/>
+          <font style="3"/>
+          <foreground color="-12566464"/>
+          <maximumSize width="83" height="30"/>
+          <minimumSize width="83" height="30"/>
+          <preferredSize width="83" height="30"/>
           <text value="Eliminar"/>
         </properties>
       </component>
@@ -27,48 +75,21 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
+          <background color="-2893351"/>
           <model/>
+          <name value="Bibliotecas"/>
         </properties>
       </component>
-      <component id="9c751" class="javax.swing.JButton" binding="agregarButton" default-binding="true">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <text value="Agregar"/>
-        </properties>
-      </component>
-      <hspacer id="df479">
-        <constraints>
-          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="4.0" weighty="0.0"/>
-        </constraints>
-      </hspacer>
-      <vspacer id="2c041">
-        <constraints>
-          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="10.0" weighty="0.0"/>
-        </constraints>
-      </vspacer>
       <component id="b6bfe" class="javax.swing.JButton" binding="buscarButton" default-binding="true">
         <constraints>
           <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
+          <background color="-5264156"/>
+          <font style="3"/>
+          <foreground color="-12500671"/>
           <text value="Buscar"/>
-        </properties>
-      </component>
-      <component id="8201e" class="javax.swing.JTextField" binding="textField1" default-binding="true">
-        <constraints>
-          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-          <gridbag weightx="10.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <text value=""/>
         </properties>
       </component>
     </children>

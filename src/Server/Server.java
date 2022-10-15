@@ -10,34 +10,33 @@ import java.util.logging.Logger;
 
 public class Server {
     public static void main (String[] args){
-        //ServerSocket serverSocket = null;
-        //Socket clientSocket = null;
-        //DataInputStream in;
-        //DataOutputStream out;
-        //final int PORT = 5000;
-        //try {
-            //serverSocket = new ServerSocket(PORT);
-            //System.out.println("Server in on!!");
+        ServerSocket serverSocket = null;
+        Socket clientSocket = null;
+        DataInputStream in;
+        DataOutputStream out;
+        final int PORT = 5000;
+        try {
+            serverSocket = new ServerSocket(PORT);
+            System.out.println("Server in on!!");
 
-            //while (true) {
-                //clientSocket = serverSocket.accept();
-                //System.out.println("Client connected");
+            while (true) {
+                clientSocket = serverSocket.accept();
+                System.out.println("Client connected");
 
 
-                //in = new DataInputStream(clientSocket.getInputStream());
-                //out = new DataOutputStream(clientSocket.getOutputStream());
+                in = new DataInputStream(clientSocket.getInputStream());
+                out = new DataOutputStream(clientSocket.getOutputStream());
 
-                //String message = in.readUTF();
-                //System.out.println(message);
+                String message = in.readUTF();
+                System.out.println(message);
 
-                //out.writeUTF("Message Received");
+                out.writeUTF("Message Received");
 
-                //clientSocket.close();
-                //System.out.println("Client disconnected");
-            //}
-        //} catch (IOException e) {
-            //Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null,e);
-        //}
-        ComparaPalabra com = new ComparaPalabra();
+                clientSocket.close();
+                System.out.println("Client disconnected");
+            }
+        } catch (IOException e) {
+            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null,e);
+        }
     }
 }

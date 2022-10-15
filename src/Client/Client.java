@@ -6,7 +6,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 
-public class Client extends JFrame{
+public class Client extends javax.swing.JFrame{
     private JButton eliminarButton;
     private JButton agregarButton;
     private JTextField textField1;
@@ -46,5 +46,11 @@ public class Client extends JFrame{
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(MainPanel);
         this.pack();
+
+        Bibliotecas.addItem("El pedefe.txt");//Añadir archivos
+        Bibliotecas.addItem("tilin.pdf");
+        Bibliotecas.addItem("Aurelio.docx");
+
+        Bibliotecas.removeItem("tilin.pdf");//eliminar archivos
     }
 }

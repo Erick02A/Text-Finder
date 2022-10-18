@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Inicialización de la interfaz grafica">
-      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se crea la calse del arbol&#10; y los nodo de estos">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Arboles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Arboles.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +64,7 @@
       <updated>1665625277784</updated>
       <workItem from="1665625280427" duration="2504000" />
       <workItem from="1665703301665" duration="4338000" />
+      <workItem from="1665709413713" duration="2555000" />
     </task>
     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
       <created>1665626178301</created>
@@ -89,28 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665707365289</updated>
     </task>
-    <task id="LOCAL-00005" summary="Inicialización de la interfaz grafica">
-      <created>1665814035460</created>
+    <task id="LOCAL-00005" summary="Se crea la calse del arbol&#10; y los nodo de estos">
+      <created>1665709470372</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1665814035460</updated>
+      <updated>1665709470372</updated>
     </task>
-    <task id="LOCAL-00006" summary="Inicialización de la interfaz grafica">
-      <created>1665814049699</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1665814049699</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Inicialización de la interfaz grafica">
-      <created>1665815349822</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1665815349822</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,7 +121,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se crean los mains de ambas apps" />
     <MESSAGE value="Se crea la calse del arbol&#10; y los nodo de estos" />
-    <MESSAGE value="Inicialización de la interfaz grafica" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inicialización de la interfaz grafica" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se crea la calse del arbol&#10; y los nodo de estos" />
   </component>
 </project>

@@ -6,27 +6,33 @@ import java.util.List;
 
 public class Arboles {
     private Nodo raiz;
-    private String[] alfa= {"a","b",};
     public Arboles(){
         this.raiz = null;
     }
     public void addNodo(String palabra, String[] ocurrencias){
+        Nodo nuevo = new Nodo(palabra,ocurrencias);
         if (raiz==null){
-            raiz= new Nodo(palabra,ocurrencias);
+            raiz= nuevo;
         }else {
-            List<Nodo> palabras = new ArrayList<>();
-            palabras.add(raiz);
-            palabras.add(new Nodo("aurelio",new String[]{"archivo.txt","5"}));
-            for (Nodo n: palabras){
-                System.out.println(n.getPalabra());
-            }
+            Nodo current = raiz;
+            while (current!=nuevo) {
+                List<Nodo> palabras = new ArrayList<>();
+                palabras.add(current);
+                palabras.add(nuevo);
+                Collections.sort(palabras, new ComparaPalabra());
 
-            Collections.sort(palabras, new ComparaPalabra());
-
-            for (Nodo n: palabras){
-                System.out.println(n.getPalabra());
+                if (palabras.get(0).getPalabra().equals(nuevo)) {
+                    if (current.getIzquierdo()==null){
+                        current.setIzquierdo(nuevo);
+                    }
+                    current = current.getIzquierdo();
+                }else {
+                    if(current.getDerecho()==null){
+                        current.setDerecho(nuevo);
+                    }
+                    current = current.getDerecho();
+                }
             }
-            System.out.println(palabras.get(0).getPalabra());
         }
     }
 }

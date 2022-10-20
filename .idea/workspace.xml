@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Inicialización de la interfaz grafica">
-      <change afterPath="$PROJECT_DIR$/src/Client/LeerArchivo.java" afterDir="false" />
+    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se implementa leer archivos .txt y pasar las palabras mediante sockets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Client.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +61,7 @@
       <updated>1665625277784</updated>
       <workItem from="1665625280427" duration="2504000" />
       <workItem from="1665703301665" duration="4338000" />
-      <workItem from="1666227204713" duration="10877000" />
+      <workItem from="1666227204713" duration="12010000" />
     </task>
     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
       <created>1665626178301</created>
@@ -115,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665815349822</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Se implementa leer archivos .txt y pasar las palabras mediante sockets">
+      <created>1666250926509</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666250926510</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +140,7 @@
     <MESSAGE value="Se crean los mains de ambas apps" />
     <MESSAGE value="Se crea la calse del arbol&#10; y los nodo de estos" />
     <MESSAGE value="Inicialización de la interfaz grafica" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inicialización de la interfaz grafica" />
+    <MESSAGE value="Se implementa leer archivos .txt y pasar las palabras mediante sockets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se implementa leer archivos .txt y pasar las palabras mediante sockets" />
   </component>
 </project>

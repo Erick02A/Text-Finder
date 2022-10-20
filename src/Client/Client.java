@@ -2,7 +2,6 @@ package Client;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
@@ -63,7 +62,7 @@ public class Client extends javax.swing.JFrame{
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fc = new JFileChooser();
 
-                FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT","txt");
+                FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT" ,"txt");
                 fc.setFileFilter(filtro);
                 int selection = fc.showOpenDialog(fc);
                 if(selection == JFileChooser.APPROVE_OPTION){
@@ -100,6 +99,12 @@ public class Client extends javax.swing.JFrame{
             }
         });
 
+        eliminarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Bibliotecas.removeItem(Bibliotecas.getSelectedItem());
+            }
+        });
     }
 
 }

@@ -21,7 +21,7 @@ public class Server {
 
             while (true) {
                 clientSocket = serverSocket.accept();
-                System.out.println("Client connected");
+                //System.out.println("Client connected");
 
 
                 in = new DataInputStream(clientSocket.getInputStream());
@@ -33,7 +33,7 @@ public class Server {
                 out.writeUTF("Message Received");
 
                 clientSocket.close();
-                System.out.println("Client disconnected");
+                //System.out.println("Client disconnected");
             }
         } catch (IOException e) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null,e);

@@ -21,18 +21,23 @@ public class Arboles {
                 palabras.add(nuevo);
                 Collections.sort(palabras, new ComparaPalabra());
 
-                if (palabras.get(0).getPalabra().equals(nuevo)) {
+                if (palabras.get(0).getPalabra().equals(palabra)) {
                     if (current.getIzquierdo()==null){
                         current.setIzquierdo(nuevo);
                     }
                     current = current.getIzquierdo();
+                    System.out.println("I");
                 }else {
                     if(current.getDerecho()==null){
                         current.setDerecho(nuevo);
                     }
                     current = current.getDerecho();
+                    System.out.println("D");
                 }
             }
         }
+    }
+    public Nodo getRaiz(){
+        return raiz;
     }
 }

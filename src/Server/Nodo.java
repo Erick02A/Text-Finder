@@ -5,11 +5,13 @@ public class Nodo {
     private String[] ocurrencias;
     private Nodo izquierdo;
     private  Nodo derecho;
+    private int balance;
     public Nodo(String palabra, String[] ocurrens){
         this.palabra = palabra;
         this.ocurrencias= ocurrens;
         this.izquierdo = null;
         this.derecho = null;
+        this.balance = 0;
 
     }
     public String getPalabra(){
@@ -35,5 +37,11 @@ public class Nodo {
     }
     public void setDerecho(Nodo nodo){
         this.derecho = nodo;
+    }
+    public int getBalance(){
+        return balance;
+    }
+    public void setBalance(int num){
+        this.balance = num;
     }
 }

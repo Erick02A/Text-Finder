@@ -26,13 +26,13 @@ public class Arboles {
                         current.setIzquierdo(nuevo);
                     }
                     current = current.getIzquierdo();
-                    System.out.println("I");
+                    //System.out.println("I");
                 }else {
                     if(current.getDerecho()==null){
                         current.setDerecho(nuevo);
                     }
                     current = current.getDerecho();
-                    System.out.println("D");
+                    //System.out.println("D");
                 }
             }
         }

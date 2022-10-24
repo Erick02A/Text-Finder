@@ -43,9 +43,9 @@ public class Server {
         } catch (IOException e) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null,e);
         }*/
-        crea("Los hombres son maquinas de jugar y matar XD","pepe.txt");
+        crea("los hombres son maquinas de jugar, amar y matar XD","pepe.txt");
         System.out.println("Se creo el arbol");
-        buscar("de");
+        buscar("amar");
     }
     public static void crea(String text, String archivo){
         Arbol = new Arboles();
@@ -66,6 +66,7 @@ public class Server {
         while (!find){
             List<Nodo> palabras = new ArrayList<>();
             palabras.add(current);
+            System.out.println(current.getPalabra());
             palabras.add(nuevo);
             Collections.sort(palabras, new ComparaPalabra());
             if (Objects.equals(palabra,current.getPalabra())){
@@ -79,6 +80,7 @@ public class Server {
                 current = current.getDerecho();
             }
             cont+=1;
+            System.out.println(" ");
         }
     }
 }

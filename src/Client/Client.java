@@ -77,18 +77,11 @@ public class Client extends javax.swing.JFrame{
                         while(valor != -1){
                             cadena = cadena + (char) valor;
                             valor = fr.read();
-                            if(cadena.contains(" ")){
-                                //System.out.println(cadena.replace(" ",""));
-                                Palabra = cadena.replace(" ","");
-                                sockets();
-                                cadena = "";
-
-                            }
-
                         }
                         //textArea.setText(cadena);
                         Bibliotecas.addItem(fichero);
-                        Palabra = cadena.replace(" ","");
+                        Palabra = cadena;
+                        System.out.println(Palabra);
                         sockets();
 
                     }catch (IOException e1){e1.getStackTrace();

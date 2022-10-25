@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 public class Server {
     private static Arboles Arbol;
     public static void main (String[] args){
-        /*ServerSocket serverSocket = null;
+        ServerSocket serverSocket = null;
         Socket clientSocket = null;
         DataInputStream in;
         DataOutputStream out;
@@ -37,15 +37,17 @@ public class Server {
 
                 out.writeUTF("Message Received");
 
+                crea(message,"archivo.txt");
+                buscar("hombres");
                 clientSocket.close();
-                //System.out.println("Client disconnected");
+                System.out.println("Client disconnected");
             }
         } catch (IOException e) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null,e);
-        }*/
-        crea("los hombres son maquinas de jugar, amar y matar XD","pepe.txt");
-        System.out.println("Se creo el arbol");
-        buscar("amar");
+        }
+        //crea("los hombres son maquinas de jugar, amar y matar XD.","pepe.txt");
+        //System.out.println("Se creo el arbol");
+        //buscar("jugar");
     }
     public static void crea(String text, String archivo){
         Arbol = new Arboles();
@@ -53,10 +55,15 @@ public class Server {
         //System.out.println(palabras[3]);
         int cont = 1;
         for (String i: palabras){
+            //i = i.replaceAll(".","");
+            i = i.replaceAll(";","");
+            i = i.replaceAll(":","");
+            i = i.replaceAll(",","");
             //System.out.println(i);
             Arbol.addNodo(i, new String[]{String.valueOf(cont), archivo});
             cont+=1;
         }
+        System.out.println("se creo el arbol");
     }
     public static void buscar(String palabra){
         Nodo current = Arbol.getRaiz();

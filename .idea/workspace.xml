@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se dan detalles a los AVL">
+      <change afterPath="$PROJECT_DIR$/src/Client/Archivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Text Finder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Text Finder.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ListaA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ListaA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_pdfbox.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_10_2022_17_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_10_2022_17_36__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -37,6 +43,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/abarc/.jdks/corretto-18.0.2/gson-2.3.1.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
@@ -60,6 +79,12 @@
       "PLAIN_TEXT"
     ]
   }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Client" />
+    </key>
+  </component>
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -75,6 +100,10 @@
       <workItem from="1666481295642" duration="6844000" />
       <workItem from="1666542328364" duration="4252000" />
       <workItem from="1666568207256" duration="2949000" />
+      <workItem from="1666629407644" duration="9019000" />
+      <workItem from="1666753311825" duration="5822000" />
+      <workItem from="1666822747592" duration="7795000" />
+      <workItem from="1666838824385" duration="3687000" />
       <workItem from="1666629407644" duration="6652000" />
     </task>
     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
@@ -133,6 +162,28 @@
       <option name="project" value="LOCAL" />
       <updated>1666655722375</updated>
     </task>
+    <task id="LOCAL-00009" summary="Se dan detalles a los AVL">
+      <created>1666674355495</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666674355495</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Se dan detalles a los AVL">
+      <created>1666822781465</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1666822781465</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Se dan detalles a los AVL">
+      <created>1666823061204</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666823061204</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <option name="localTasksCounter" value="9" />
     <servers />
   </component>

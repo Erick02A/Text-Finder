@@ -1,5 +1,7 @@
 package Client;
 
+import com.google.gson.Gson;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
@@ -73,23 +75,25 @@ public class Client extends javax.swing.JFrame{
                     //textField.setText(fichero.getAbsolutePath());
                     //System.out.println(fc.getName());
                     if (fichero.getName().contains(".txt")) {
-
-                        try (FileReader fr = new FileReader(fichero)) {
+                        try (FileReader fr = new FileReader(fichero)){
                             String cadena = "";
                             int valor = fr.read();
-                            while (valor != -1) {
+                            while(valor != -1){
                                 cadena = cadena + (char) valor;
                                 valor = fr.read();
                             }
                             //textArea.setText(cadena);
-
-                            Palabra = cadena;
+                            Bibliotecas.addItem(fichero);
+                            Archivo a = new Archivo(fichero.getName(),cadena);
+                            Gson g = new Gson();
+                            String json = g.toJson(a);
+                            Palabra = json;
                             System.out.println(Palabra);
                             sockets();
 
-                        } catch (IOException e1) {
-                            e1.getStackTrace();
-                        }
+                            } catch (IOException e1) {
+                                e1.getStackTrace();
+                            }
 
                     }else if (fichero.getName().contains(".pdf")){
                         try {
@@ -119,6 +123,15 @@ public class Client extends javax.swing.JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Bibliotecas.removeItem(Bibliotecas.getSelectedItem());
+            }
+        });
+        buscarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Palabra = "buscar";
+                sockets();
+                Palabra = textField1.getText();
+                sockets();
             }
         });
     }

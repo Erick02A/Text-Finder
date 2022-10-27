@@ -1,5 +1,9 @@
 package Server;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.stream.JsonReader;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -13,8 +17,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Server {
-    private static Arboles Arbol;
+    private static ListaA lista = new ListaA();
     public static void main (String[] args){
+        boolean creando = true;
         ServerSocket serverSocket = null;
         Socket clientSocket = null;
         DataInputStream in;
@@ -36,9 +41,15 @@ public class Server {
                 System.out.println(message);
 
                 out.writeUTF("Message Received");
-
-                crea(message,"archivo.txt");
-                buscar("hombres");
+                if (message.equals("Buscar")){
+                    creando = false;
+                }else if (creando == true){
+                    Gson g = new Gson();
+                    Archivo a = g.fromJson(message, Archivo.class);
+                    crea(a.getContenido(),a.getName());
+                }else if(creando == false){
+                    out.writeUTF(buscar(message));
+                }
                 clientSocket.close();
                 System.out.println("Client disconnected");
             }
@@ -50,7 +61,7 @@ public class Server {
         //buscar("jugar");
     }
     public static void crea(String text, String archivo){
-        Arbol = new Arboles();
+        Arboles arbol = new Arboles();
         String[] palabras =  text.split(" ");
         //System.out.println(palabras[3]);
         int cont = 1;
@@ -60,34 +71,59 @@ public class Server {
             i = i.replaceAll(":","");
             i = i.replaceAll(",","");
             //System.out.println(i);
-            Arbol.addNodo(i, new String[]{String.valueOf(cont), archivo});
+            arbol.addNodo(i, new String[]{String.valueOf(cont), archivo});
             cont+=1;
         }
+        NodoA a = new NodoA(arbol);
+        lista.add(a);
         System.out.println("se creo el arbol");
     }
-    public static void buscar(String palabra){
-        Nodo current = Arbol.getRaiz();
+    public static String buscar(String palabra){
+        NodoA current1 = lista.getHead();
+        Nodo current = current1.getArbol().getRaiz();
         int cont = 1;
-        boolean find = false;
         Nodo nuevo = new Nodo(palabra,new String[] {""});
-        while (!find){
+        while (true){
             List<Nodo> palabras = new ArrayList<>();
             palabras.add(current);
             System.out.println(current.getPalabra());
             palabras.add(nuevo);
             Collections.sort(palabras, new ComparaPalabra());
             if (Objects.equals(palabra,current.getPalabra())){
-                System.out.println("Encontrado, "+String.valueOf(cont));
-                find = true;
-            } else if (palabras.get(0).getPalabra().equals(palabra)){
-                System.out.println("Izquierda");
-                current = current.getIzquierdo();
+                //System.out.println("Encontrado, "+String.valueOf(cont));
+                return "Enccontrado: "+String.valueOf(cont)+", "+current.getOcurrencias()[0]+", "+current.getOcurrencias()[1];
+            }else if (palabras.get(0).getPalabra().equals(palabra)){
+                if (current.getIzquierdo()!=null) {
+                    System.out.println("Izquierda");
+                    current = current.getIzquierdo();
+                } else {
+                    System.out.println("Cambia Arbol");
+                    if (current1.getNext()!=null) {
+                        current1 = current1.getNext();
+                        current = current1.getArbol().getRaiz();
+                    }else {
+                        //System.out.println("no se encontro");
+                        return "No se encontro";
+                    }
+                }
             }else if (palabras.get(1).getPalabra().equals(palabra)){
-                System.out.println("Derecha");
-                current = current.getDerecho();
+                if (current.getDerecho()!=null) {
+                    System.out.println("Derecha");
+                    current = current.getDerecho();
+                }else {
+                    System.out.println("Cambia Arbol");
+                    if (current1.getNext()!=null) {
+                        current1 = current1.getNext();
+                        current = current1.getArbol().getRaiz();
+                    }else {
+                        //System.out.println("no se encontro");
+                        return "No se encontro";
+                    }
+                }
             }
             cont+=1;
             System.out.println(" ");
         }
+
     }
 }

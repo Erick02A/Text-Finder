@@ -1,0 +1,583 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09__Changes_.xml	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
++++ /dev/null	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_14_10_2022_21_09_[Changes]" date="1665803363370" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 14/10/2022 21:09 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28__Changes_.xml	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
++++ /dev/null	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_13_10_2022_18_28_[Changes]" date="1665707282779" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 13/10/2022 18:28 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27__Changes_.xml	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
++++ /dev/null	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_14_10_2022_21_27_[Changes]" date="1665804447945" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 14/10/2022 21:27 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_27_[Changes]/shelved.patch	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
++++ /dev/null	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
+@@ -1,193 +0,0 @@
+-Index: src/Server/Server.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>package Server;\r\n\r\nimport java.io.DataInputStream;\r\nimport java.io.DataOutputStream;\r\nimport java.io.IOException;\r\nimport java.net.ServerSocket;\r\nimport java.net.Socket;\r\nimport java.util.logging.Level;\r\nimport java.util.logging.Logger;\r\n\r\npublic class Server {\r\n    public static void main (String[] args){\r\n        //ServerSocket serverSocket = null;\r\n        //Socket clientSocket = null;\r\n        //DataInputStream in;\r\n        //DataOutputStream out;\r\n        //final int PORT = 5000;\r\n        //try {\r\n            //serverSocket = new ServerSocket(PORT);\r\n            //System.out.println(\"Server in on!!\");\r\n\r\n            //while (true) {\r\n                //clientSocket = serverSocket.accept();\r\n                //System.out.println(\"Client connected\");\r\n\r\n\r\n                //in = new DataInputStream(clientSocket.getInputStream());\r\n                //out = new DataOutputStream(clientSocket.getOutputStream());\r\n\r\n                //String message = in.readUTF();\r\n                //System.out.println(message);\r\n\r\n                //out.writeUTF(\"Message Received\");\r\n\r\n                //clientSocket.close();\r\n                //System.out.println(\"Client disconnected\");\r\n            //}\r\n        //} catch (IOException e) {\r\n            //Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null,e);\r\n        //}\r\n        ComparaPalabra com = new ComparaPalabra();\r\n    }\r\n}\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/Server/Server.java b/src/Server/Server.java
+---- a/src/Server/Server.java	(revision 4bf5aad846a5da356e8401b2f3bb9220e31d446d)
+-+++ b/src/Server/Server.java	(date 1665804430770)
+-@@ -10,34 +10,34 @@
+- 
+- public class Server {
+-     public static void main (String[] args){
+--        //ServerSocket serverSocket = null;
+--        //Socket clientSocket = null;
+--        //DataInputStream in;
+--        //DataOutputStream out;
+--        //final int PORT = 5000;
+--        //try {
+--            //serverSocket = new ServerSocket(PORT);
+--            //System.out.println("Server in on!!");
+-+        ServerSocket serverSocket = null;
+-+        Socket clientSocket = null;
+-+        DataInputStream in;
+-+        DataOutputStream out;
+-+        final int PORT = 5000;
+-+        try {
+-+            serverSocket = new ServerSocket(PORT);
+-+            System.out.println("Server in on!!");
+- 
+--            //while (true) {
+--                //clientSocket = serverSocket.accept();
+--                //System.out.println("Client connected");
+-+            while (true) {
+-+                clientSocket = serverSocket.accept();
+-+                System.out.println("Client connected");
+- 
+- 
+--                //in = new DataInputStream(clientSocket.getInputStream());
+--                //out = new DataOutputStream(clientSocket.getOutputStream());
+-+                in = new DataInputStream(clientSocket.getInputStream());
+-+                out = new DataOutputStream(clientSocket.getOutputStream());
+- 
+--                //String message = in.readUTF();
+--                //System.out.println(message);
+-+                String message = in.readUTF();
+-+                System.out.println(message);
+- 
+--                //out.writeUTF("Message Received");
+-+                out.writeUTF("Message Received");
+- 
+--                //clientSocket.close();
+--                //System.out.println("Client disconnected");
+--            //}
+--        //} catch (IOException e) {
+--            //Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null,e);
+--        //}
+-+                clientSocket.close();
+-+                System.out.println("Client disconnected");
+-+            }
+-+        } catch (IOException e) {
+-+            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null,e);
+-+        }
+-         ComparaPalabra com = new ComparaPalabra();
+-     }
+- }
+-Index: src/Server/ComparaPalabra.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>package Server;\r\n\r\nimport java.util.Comparator;\r\n\r\npublic class ComparaPalabra implements Comparator {\r\n    @Override\r\n    public int compare(Nodo nodo1, Nodo nodo2) {\r\n        return nodo1.getPalabra().compareTo(nodo2.getPalabra());\r\n    }\r\n\r\n    @Override\r\n    public int compare(Object o1, Object o2) {\r\n        return 0;\r\n    }\r\n}\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/Server/ComparaPalabra.java b/src/Server/ComparaPalabra.java
+---- a/src/Server/ComparaPalabra.java	(revision 4bf5aad846a5da356e8401b2f3bb9220e31d446d)
+-+++ b/src/Server/ComparaPalabra.java	(date 1665803611444)
+-@@ -3,7 +3,7 @@
+- import java.util.Comparator;
+- 
+- public class ComparaPalabra implements Comparator {
+--    @Override
+-+    //@Override
+-     public int compare(Nodo nodo1, Nodo nodo2) {
+-         return nodo1.getPalabra().compareTo(nodo2.getPalabra());
+-     }
+-Index: .idea/misc.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_18\" default=\"true\" project-jdk-name=\"18\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/misc.xml b/.idea/misc.xml
+---- a/.idea/misc.xml	(revision 4bf5aad846a5da356e8401b2f3bb9220e31d446d)
+-+++ b/.idea/misc.xml	(date 1665803354670)
+-@@ -1,6 +1,6 @@
+- <?xml version="1.0" encoding="UTF-8"?>
+- <project version="4">
+--  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
+-+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18_PREVIEW" project-jdk-name="18" project-jdk-type="JavaSDK">
+-     <output url="file://$PROJECT_DIR$/out" />
+-   </component>
+- </project>
+-\ No newline at end of file
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d3c922a9-0fa1-45ca-b9aa-b15a59772a85\" name=\"Changes\" comment=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/Server/ComparaPalabra.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Server/Arboles.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Server/Arboles.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Server/Server.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Server/Server.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2G3liEzK7gsFwxkLcie4AA2ntYM\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [\r\n      &quot;PLAIN_TEXT&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d3c922a9-0fa1-45ca-b9aa-b15a59772a85\" name=\"Changes\" comment=\"\" />\r\n      <created>1665625277784</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1665625277784</updated>\r\n      <workItem from=\"1665625280427\" duration=\"2504000\" />\r\n      <workItem from=\"1665703301665\" duration=\"4338000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se crean los mains de ambas apps\">\r\n      <created>1665626178301</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665626178301</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Se crean los mains de ambas apps\">\r\n      <created>1665627690203</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665627690203</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <created>1665707349042</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665707349042</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <created>1665707365289</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665707365289</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se crean los mains de ambas apps\" />\r\n    <MESSAGE value=\"Se crea la calse del arbol&#10; y los nodo de estos\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se crea la calse del arbol&#10; y los nodo de estos\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 4bf5aad846a5da356e8401b2f3bb9220e31d446d)
+-+++ b/.idea/workspace.xml	(date 1665803884221)
+-@@ -4,12 +4,11 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se crea la calse del arbol&#10; y los nodo de estos">
+--      <change afterPath="$PROJECT_DIR$/src/Server/ComparaPalabra.java" afterDir="false" />
+-+    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Test">
+-       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28__Changes_.xml" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/Server/Arboles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Arboles.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/src/Server/ComparaPalabra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ComparaPalabra.java" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -54,6 +53,11 @@
+-     ]
+-   }
+- }</component>
+-+  <component name="RecentsManager">
+-+    <key name="ExtractSuperBase.RECENT_KEYS">
+-+      <recent name="Server" />
+-+    </key>
+-+  </component>
+-   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-   <component name="TaskManager">
+-     <task active="true" id="Default" summary="Default task">
+-@@ -62,8 +66,7 @@
+-       <option name="number" value="Default" />
+-       <option name="presentableId" value="Default" />
+-       <updated>1665625277784</updated>
+--      <workItem from="1665625280427" duration="2504000" />
+--      <workItem from="1665703301665" duration="4338000" />
+-+      <workItem from="1665625280427" duration="1716000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
+-       <created>1665626178301</created>
+-@@ -72,28 +75,7 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1665626178301</updated>
+-     </task>
+--    <task id="LOCAL-00002" summary="Se crean los mains de ambas apps">
+--      <created>1665627690203</created>
+--      <option name="number" value="00002" />
+--      <option name="presentableId" value="LOCAL-00002" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1665627690203</updated>
+--    </task>
+--    <task id="LOCAL-00003" summary="Se crea la calse del arbol&#10; y los nodo de estos">
+--      <created>1665707349042</created>
+--      <option name="number" value="00003" />
+--      <option name="presentableId" value="LOCAL-00003" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1665707349042</updated>
+--    </task>
+--    <task id="LOCAL-00004" summary="Se crea la calse del arbol&#10; y los nodo de estos">
+--      <created>1665707365289</created>
+--      <option name="number" value="00004" />
+--      <option name="presentableId" value="LOCAL-00004" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1665707365289</updated>
+--    </task>
+--    <option name="localTasksCounter" value="5" />
+-+    <option name="localTasksCounter" value="2" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -112,7 +94,6 @@
+-   </component>
+-   <component name="VcsManagerConfiguration">
+-     <MESSAGE value="Se crean los mains de ambas apps" />
+--    <MESSAGE value="Se crea la calse del arbol&#10; y los nodo de estos" />
+--    <option name="LAST_COMMIT_MESSAGE" value="Se crea la calse del arbol&#10; y los nodo de estos" />
+-+    <option name="LAST_COMMIT_MESSAGE" value="Se crean los mains de ambas apps" />
+-   </component>
+- </project>
+-\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_13_10_2022_18_28_[Changes]/shelved.patch	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
++++ /dev/null	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
+@@ -1,164 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d3c922a9-0fa1-45ca-b9aa-b15a59772a85\" name=\"Changes\" comment=\"Se crean los mains de ambas apps\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Client/Client.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Client/Client.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Server/Server.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Server/Server.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2G3liEzK7gsFwxkLcie4AA2ntYM\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File\": [\r\n      \"PLAIN_TEXT\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d3c922a9-0fa1-45ca-b9aa-b15a59772a85\" name=\"Changes\" comment=\"\" />\r\n      <created>1665625277784</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1665625277784</updated>\r\n      <workItem from=\"1665625280427\" duration=\"1716000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se crean los mains de ambas apps\">\r\n      <created>1665626178301</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665626178301</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se crean los mains de ambas apps\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se crean los mains de ambas apps\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 49c14672b5f5c512205f09d64b0ed88c93dd1c01)
+-+++ b/.idea/workspace.xml	(date 1665707278080)
+-@@ -5,9 +5,9 @@
+-   </component>
+-   <component name="ChangeListManager">
+-     <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se crean los mains de ambas apps">
+-+      <change afterPath="$PROJECT_DIR$/src/Server/Arboles.java" afterDir="false" />
+-+      <change afterPath="$PROJECT_DIR$/src/Server/Nodo.java" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -33,25 +33,25 @@
+-     <option name="hideEmptyMiddlePackages" value="true" />
+-     <option name="showLibraryContents" value="true" />
+-   </component>
+--  <component name="PropertiesComponent"><![CDATA[{
+--  "keyToString": {
+--    "RunOnceActivity.OpenProjectViewOnStart": "true",
+--    "RunOnceActivity.ShowReadmeOnStart": "true",
+--    "WebServerToolWindowFactoryState": "false",
+--    "node.js.detected.package.eslint": "true",
+--    "node.js.detected.package.tslint": "true",
+--    "node.js.selected.package.eslint": "(autodetect)",
+--    "node.js.selected.package.tslint": "(autodetect)",
+--    "project.structure.last.edited": "Libraries",
+--    "project.structure.proportion": "0.15",
+--    "project.structure.side.proportion": "0.2"
+-+  <component name="PropertiesComponent">{
+-+  &quot;keyToString&quot;: {
+-+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+-+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+-   },
+--  "keyToStringList": {
+--    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+--      "PLAIN_TEXT"
+-+  &quot;keyToStringList&quot;: {
+-+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+-+      &quot;PLAIN_TEXT&quot;
+-     ]
+-   }
+--}]]></component>
+-+}</component>
+-   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-   <component name="TaskManager">
+-     <task active="true" id="Default" summary="Default task">
+-@@ -60,7 +60,8 @@
+-       <option name="number" value="Default" />
+-       <option name="presentableId" value="Default" />
+-       <updated>1665625277784</updated>
+--      <workItem from="1665625280427" duration="1716000" />
+-+      <workItem from="1665625280427" duration="2504000" />
+-+      <workItem from="1665703301665" duration="2693000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
+-       <created>1665626178301</created>
+-@@ -69,7 +70,14 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1665626178301</updated>
+-     </task>
+--    <option name="localTasksCounter" value="2" />
+-+    <task id="LOCAL-00002" summary="Se crean los mains de ambas apps">
+-+      <created>1665627690203</created>
+-+      <option name="number" value="00002" />
+-+      <option name="presentableId" value="LOCAL-00002" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1665627690203</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="3" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-Index: src/Server/Arboles.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/Server/Arboles.java b/src/Server/Arboles.java
+-new file mode 100644
+---- /dev/null	(date 1665707278014)
+-+++ b/src/Server/Arboles.java	(date 1665707278014)
+-@@ -0,0 +1,15 @@
+-+package Server;
+-+
+-+public class Arboles {
+-+    private Nodo raiz;
+-+    public Arboles(){
+-+        this.raiz = null;
+-+    }
+-+    public void addNodo(String palabra, String[] ocurrencias){
+-+        if (raiz==null){
+-+            raiz= new Nodo(palabra,ocurrencias);
+-+        }else {
+-+
+-+        }
+-+    }
+-+}
+-Index: src/Server/Nodo.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/src/Server/Nodo.java b/src/Server/Nodo.java
+-new file mode 100644
+---- /dev/null	(date 1665707278030)
+-+++ b/src/Server/Nodo.java	(date 1665707278030)
+-@@ -0,0 +1,39 @@
+-+package Server;
+-+
+-+public class Nodo {
+-+    private String palabra;
+-+    private String[] ocurrencias;
+-+    private Nodo izquierdo;
+-+    private  Nodo derecho;
+-+    public Nodo(String palabra, String[] ocurrens){
+-+        this.palabra = palabra;
+-+        this.ocurrencias= ocurrens;
+-+        this.izquierdo = null;
+-+        this.derecho = null;
+-+
+-+    }
+-+    public String getPalabra(){
+-+        return palabra;
+-+    }
+-+    public String[] getOcurrencias(){
+-+        return ocurrencias;
+-+    }
+-+    public void setPalabra(String palabra){
+-+        this.palabra = palabra;
+-+    }
+-+    public void setOcurrencias(String[] ocurrencias){
+-+        this.ocurrencias = ocurrencias;
+-+    }
+-+    public Nodo getIzquierdo(){
+-+        return  izquierdo;
+-+    }
+-+    public Nodo getDerecho(){
+-+        return derecho;
+-+    }
+-+    public void setIzquierdo(Nodo nodo){
+-+        this.izquierdo = nodo;
+-+    }
+-+    public void setDerecho(Nodo nodo){
+-+        this.derecho = nodo;
+-+    }
+-+}
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2022_21_09_[Changes]/shelved.patch	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
++++ /dev/null	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
+@@ -1,122 +0,0 @@
+-Index: .idea/misc.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_18_PREVIEW\" project-jdk-name=\"18\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/misc.xml b/.idea/misc.xml
+---- a/.idea/misc.xml	(revision cf12ffc789b58d13c9329344f6f2f4c98e90da1a)
+-+++ b/.idea/misc.xml	(date 1665639032721)
+-@@ -1,6 +1,6 @@
+- <?xml version="1.0" encoding="UTF-8"?>
+- <project version="4">
+--  <component name="ProjectRootManager" version="2" languageLevel="JDK_18_PREVIEW" project-jdk-name="18" project-jdk-type="JavaSDK">
+-+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" project-jdk-name="openjdk-19" project-jdk-type="JavaSDK">
+-     <output url="file://$PROJECT_DIR$/out" />
+-   </component>
+- </project>
+-\ No newline at end of file
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d3c922a9-0fa1-45ca-b9aa-b15a59772a85\" name=\"Changes\" comment=\"Se crean los mains de ambas apps\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Client/Client.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Client/Client.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Server/Server.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Server/Server.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2G3liEzK7gsFwxkLcie4AA2ntYM\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File\": [\r\n      \"PLAIN_TEXT\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d3c922a9-0fa1-45ca-b9aa-b15a59772a85\" name=\"Changes\" comment=\"\" />\r\n      <created>1665625277784</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1665625277784</updated>\r\n      <workItem from=\"1665625280427\" duration=\"1716000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se crean los mains de ambas apps\">\r\n      <created>1665626178301</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665626178301</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se crean los mains de ambas apps\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se crean los mains de ambas apps\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision cf12ffc789b58d13c9329344f6f2f4c98e90da1a)
+-+++ b/.idea/workspace.xml	(date 1665707111881)
+-@@ -4,10 +4,9 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se crean los mains de ambas apps">
+-+    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Test">
+-+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -33,25 +32,27 @@
+-     <option name="hideEmptyMiddlePackages" value="true" />
+-     <option name="showLibraryContents" value="true" />
+-   </component>
+--  <component name="PropertiesComponent"><![CDATA[{
+--  "keyToString": {
+--    "RunOnceActivity.OpenProjectViewOnStart": "true",
+--    "RunOnceActivity.ShowReadmeOnStart": "true",
+--    "WebServerToolWindowFactoryState": "false",
+--    "node.js.detected.package.eslint": "true",
+--    "node.js.detected.package.tslint": "true",
+--    "node.js.selected.package.eslint": "(autodetect)",
+--    "node.js.selected.package.tslint": "(autodetect)",
+--    "project.structure.last.edited": "Libraries",
+--    "project.structure.proportion": "0.15",
+--    "project.structure.side.proportion": "0.2"
+-+  <component name="PropertiesComponent">{
+-+  &quot;keyToString&quot;: {
+-+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/Desktop/java/Text-Finder&quot;,
+-+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+-+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+-   },
+--  "keyToStringList": {
+--    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+--      "PLAIN_TEXT"
+-+  &quot;keyToStringList&quot;: {
+-+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+-+      &quot;PLAIN_TEXT&quot;
+-     ]
+-   }
+--}]]></component>
+-+}</component>
+-   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-   <component name="TaskManager">
+-     <task active="true" id="Default" summary="Default task">
+-@@ -61,6 +62,9 @@
+-       <option name="presentableId" value="Default" />
+-       <updated>1665625277784</updated>
+-       <workItem from="1665625280427" duration="1716000" />
+-+      <workItem from="1665638728641" duration="1231000" />
+-+      <workItem from="1665706287591" duration="136000" />
+-+      <workItem from="1665707094865" duration="17000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
+-       <created>1665626178301</created>
+-@@ -69,7 +73,14 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1665626178301</updated>
+-     </task>
+--    <option name="localTasksCounter" value="2" />
+-+    <task id="LOCAL-00002" summary="Test">
+-+      <created>1665638830011</created>
+-+      <option name="number" value="00002" />
+-+      <option name="presentableId" value="LOCAL-00002" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1665638830011</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="3" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -88,6 +99,7 @@
+-   </component>
+-   <component name="VcsManagerConfiguration">
+-     <MESSAGE value="Se crean los mains de ambas apps" />
+--    <option name="LAST_COMMIT_MESSAGE" value="Se crean los mains de ambas apps" />
+-+    <MESSAGE value="Test" />
+-+    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+-   </component>
+- </project>
+-\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d3c922a9-0fa1-45ca-b9aa-b15a59772a85\" name=\"Changes\" comment=\"Se implementa leer archivos .txt y pasar las palabras mediante sockets\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Client/Client.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Client/Client.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2G3liEzK7gsFwxkLcie4AA2ntYM\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [\r\n      &quot;PLAIN_TEXT&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d3c922a9-0fa1-45ca-b9aa-b15a59772a85\" name=\"Changes\" comment=\"\" />\r\n      <created>1665625277784</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1665625277784</updated>\r\n      <workItem from=\"1665625280427\" duration=\"2504000\" />\r\n      <workItem from=\"1665703301665\" duration=\"4338000\" />\r\n      <workItem from=\"1666227204713\" duration=\"12010000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se crean los mains de ambas apps\">\r\n      <created>1665626178301</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665626178301</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Se crean los mains de ambas apps\">\r\n      <created>1665627690203</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665627690203</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <created>1665707349042</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665707349042</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <created>1665707365289</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665707365289</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Inicialización de la interfaz grafica\">\r\n      <created>1665814035460</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665814035460</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Inicialización de la interfaz grafica\">\r\n      <created>1665814049699</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665814049699</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Inicialización de la interfaz grafica\">\r\n      <created>1665815349822</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665815349822</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Se implementa leer archivos .txt y pasar las palabras mediante sockets\">\r\n      <created>1666250926509</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666250926510</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"9\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se crean los mains de ambas apps\" />\r\n    <MESSAGE value=\"Se crea la calse del arbol&#10; y los nodo de estos\" />\r\n    <MESSAGE value=\"Inicialización de la interfaz grafica\" />\r\n    <MESSAGE value=\"Se implementa leer archivos .txt y pasar las palabras mediante sockets\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se implementa leer archivos .txt y pasar las palabras mediante sockets\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 387995997f025c7357ddd143947d8a1e2912b3e1)
++++ b/.idea/workspace.xml	(date 1666252395750)
+@@ -4,10 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se implementa leer archivos .txt y pasar las palabras mediante sockets">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+-    </list>
++    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se implementa leer archivos .txt y pasar las palabras mediante sockets" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -61,7 +58,7 @@
+       <updated>1665625277784</updated>
+       <workItem from="1665625280427" duration="2504000" />
+       <workItem from="1665703301665" duration="4338000" />
+-      <workItem from="1666227204713" duration="12010000" />
++      <workItem from="1666227204713" duration="12462000" />
+     </task>
+     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
+       <created>1665626178301</created>
+@@ -119,7 +116,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1666250926510</updated>
+     </task>
+-    <option name="localTasksCounter" value="9" />
++    <task id="LOCAL-00009" summary="Se implementa leer archivos .txt y pasar las palabras mediante sockets">
++      <created>1666251982381</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1666251982381</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">

@@ -6,8 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.Socket;
-//import com.sun.pdfview.PDFFile;
-
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.poi.xwpf.usermodel.*;
 public class Client extends javax.swing.JFrame{
     private JButton eliminarButton;
     private JButton agregarButton;
@@ -62,31 +63,53 @@ public class Client extends javax.swing.JFrame{
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fc = new JFileChooser();
 
-                FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT" ,"txt");
+                FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT *.PDF" ,"txt","pdf","docx");
                 fc.setFileFilter(filtro);
                 int selection = fc.showOpenDialog(fc);
-                if(selection == JFileChooser.APPROVE_OPTION){
+                if(selection == JFileChooser.APPROVE_OPTION) {
                     File fichero = fc.getSelectedFile();
+                    Bibliotecas.addItem(fichero.getName());
 
                     //textField.setText(fichero.getAbsolutePath());
                     //System.out.println(fc.getName());
+                    if (fichero.getName().contains(".txt")) {
 
-                    try (FileReader fr = new FileReader(fichero)){
-                        String cadena = "";
-                        int valor = fr.read();
-                        while(valor != -1){
-                            cadena = cadena + (char) valor;
-                            valor = fr.read();
+                        try (FileReader fr = new FileReader(fichero)) {
+                            String cadena = "";
+                            int valor = fr.read();
+                            while (valor != -1) {
+                                cadena = cadena + (char) valor;
+                                valor = fr.read();
+                            }
+                            //textArea.setText(cadena);
+
+                            Palabra = cadena;
+                            System.out.println(Palabra);
+                            sockets();
+
+                        } catch (IOException e1) {
+                            e1.getStackTrace();
                         }
-                        //textArea.setText(cadena);
-                        Bibliotecas.addItem(fichero);
-                        Palabra = cadena;
-                        System.out.println(Palabra);
-                        sockets();
 
-                    }catch (IOException e1){e1.getStackTrace();
+                    }else if (fichero.getName().contains(".pdf")){
+                        try {
+                            FileInputStream fis = new FileInputStream(fichero);
+
+                            PDDocument pdfDocument = PDDocument.load(fis);
+                            //System.out.println(pdfDocument.getPages().getCount());
+                            PDFTextStripper pdfTextStripper = new PDFTextStripper();
+                            Palabra = pdfTextStripper.getText(pdfDocument);
+                            System.out.println(Palabra);
+                            sockets();
+                            pdfDocument.close();
+                            fis.close();
+
+                        } catch (IOException ex) {
+                            throw new RuntimeException(ex);
+                        }
+                    }else{
+                        System.out.println("en implementacion");
                     }
-
                 }
 
             }

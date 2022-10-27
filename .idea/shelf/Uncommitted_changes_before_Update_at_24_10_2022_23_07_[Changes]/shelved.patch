@@ -1,0 +1,137 @@
+Index: src/Server/Server.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Server;\r\n\r\nimport java.io.DataInputStream;\r\nimport java.io.DataOutputStream;\r\nimport java.io.IOException;\r\nimport java.net.ServerSocket;\r\nimport java.net.Socket;\r\nimport java.util.ArrayList;\r\nimport java.util.Collections;\r\nimport java.util.List;\r\nimport java.util.Objects;\r\nimport java.util.logging.Level;\r\nimport java.util.logging.Logger;\r\n\r\npublic class Server {\r\n    private static Arboles Arbol;\r\n    public static void main (String[] args){\r\n        /*ServerSocket serverSocket = null;\r\n        Socket clientSocket = null;\r\n        DataInputStream in;\r\n        DataOutputStream out;\r\n        final int PORT = 5000;\r\n        try {\r\n            serverSocket = new ServerSocket(PORT);\r\n            System.out.println(\"Server in on!!\");\r\n\r\n            while (true) {\r\n                clientSocket = serverSocket.accept();\r\n                //System.out.println(\"Client connected\");\r\n\r\n\r\n                in = new DataInputStream(clientSocket.getInputStream());\r\n                out = new DataOutputStream(clientSocket.getOutputStream());\r\n\r\n                String message = in.readUTF();\r\n                System.out.println(message);\r\n\r\n                out.writeUTF(\"Message Received\");\r\n\r\n                clientSocket.close();\r\n                //System.out.println(\"Client disconnected\");\r\n            }\r\n        } catch (IOException e) {\r\n            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null,e);\r\n        }*/\r\n        crea(\"los hombres son maquinas de jugar, amar y matar XD\",\"pepe.txt\");\r\n        System.out.println(\"Se creo el arbol\");\r\n        buscar(\"amar\");\r\n    }\r\n    public static void crea(String text, String archivo){\r\n        Arbol = new Arboles();\r\n        String[] palabras =  text.split(\" \");\r\n        //System.out.println(palabras[3]);\r\n        int cont = 1;\r\n        for (String i: palabras){\r\n            //System.out.println(i);\r\n            Arbol.addNodo(i, new String[]{String.valueOf(cont), archivo});\r\n            cont+=1;\r\n        }\r\n    }\r\n    public static void buscar(String palabra){\r\n        Nodo current = Arbol.getRaiz();\r\n        int cont = 1;\r\n        boolean find = false;\r\n        Nodo nuevo = new Nodo(palabra,new String[] {\"\"});\r\n        while (!find){\r\n            List<Nodo> palabras = new ArrayList<>();\r\n            palabras.add(current);\r\n            System.out.println(current.getPalabra());\r\n            palabras.add(nuevo);\r\n            Collections.sort(palabras, new ComparaPalabra());\r\n            if (Objects.equals(palabra,current.getPalabra())){\r\n                System.out.println(\"Encontrado, \"+String.valueOf(cont));\r\n                find = true;\r\n            } else if (palabras.get(0).getPalabra().equals(palabra)){\r\n                System.out.println(\"Izquierda\");\r\n                current = current.getIzquierdo();\r\n            }else if (palabras.get(1).getPalabra().equals(palabra)){\r\n                System.out.println(\"Derecha\");\r\n                current = current.getDerecho();\r\n            }\r\n            cont+=1;\r\n            System.out.println(\" \");\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Server/Server.java b/src/Server/Server.java
+--- a/src/Server/Server.java	(revision 7fc9559b4525a4e6c7babd875bc3301e9f141bcd)
++++ b/src/Server/Server.java	(date 1666655911319)
+@@ -45,7 +45,7 @@
+         }*/
+         crea("los hombres son maquinas de jugar, amar y matar XD","pepe.txt");
+         System.out.println("Se creo el arbol");
+-        buscar("amar");
++        buscar("jugar");
+     }
+     public static void crea(String text, String archivo){
+         Arbol = new Arboles();
+Index: src/Client/Client.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Client;\r\n\r\nimport javax.swing.*;\r\nimport javax.swing.filechooser.FileNameExtensionFilter;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\nimport java.io.*;\r\nimport java.net.Socket;\r\n//import com.sun.pdfview.PDFFile;\r\n\r\npublic class Client extends javax.swing.JFrame{\r\n    private JButton eliminarButton;\r\n    private JButton agregarButton;\r\n    private JTextField textField1;\r\n    private JButton buscarButton;\r\n    private JComboBox Bibliotecas;\r\n    private JPanel MainPanel;\r\n    private JTextField textField;\r\n    private static String Palabra = \"Probando\";\r\n\r\n    final String HOST = \"127.0.0.1\";\r\n    final int PORT = 5000;\r\n    DataOutputStream out;\r\n    DataInputStream in;\r\n\r\n\r\n\r\n    public static void main(String[] args) {\r\n\r\n        JFrame frame = new Client(\"Text Finder\");\r\n        frame.setVisible(true);\r\n\r\n    }\r\n\r\n    private void sockets(){\r\n        try {\r\n            Socket clientSocket = new Socket(HOST, PORT);\r\n\r\n            in = new DataInputStream(clientSocket.getInputStream());\r\n            out = new DataOutputStream(clientSocket.getOutputStream());\r\n\r\n            out.writeUTF(Palabra);\r\n\r\n            String message = in.readUTF();\r\n            //System.out.println(message);\r\n\r\n            clientSocket.close();\r\n        } catch (IOException e) {\r\n            System.out.println(e);\r\n        }\r\n\r\n    }\r\n    public Client(String title){\r\n        super (title);\r\n\r\n        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);\r\n        this.setContentPane(MainPanel);\r\n        this.pack();\r\n\r\n\r\n        agregarButton.addActionListener(new ActionListener() {\r\n            public void actionPerformed(ActionEvent e) {\r\n                JFileChooser fc = new JFileChooser();\r\n\r\n                FileNameExtensionFilter filtro = new FileNameExtensionFilter(\"*.TXT\" ,\"txt\");\r\n                fc.setFileFilter(filtro);\r\n                int selection = fc.showOpenDialog(fc);\r\n                if(selection == JFileChooser.APPROVE_OPTION){\r\n                    File fichero = fc.getSelectedFile();\r\n\r\n                    //textField.setText(fichero.getAbsolutePath());\r\n                    //System.out.println(fc.getName());\r\n\r\n                    try (FileReader fr = new FileReader(fichero)){\r\n                        String cadena = \"\";\r\n                        int valor = fr.read();\r\n                        while(valor != -1){\r\n                            cadena = cadena + (char) valor;\r\n                            valor = fr.read();\r\n                            if(cadena.contains(\" \")){\r\n                                //System.out.println(cadena.replace(\" \",\"\"));\r\n                                Palabra = cadena.replace(\" \",\"\");\r\n                                sockets();\r\n                                cadena = \"\";\r\n\r\n                            }\r\n\r\n                        }\r\n                        //textArea.setText(cadena);\r\n                        Bibliotecas.addItem(fichero);\r\n                        Palabra = cadena.replace(\" \",\"\");\r\n                        sockets();\r\n\r\n                    }catch (IOException e1){e1.getStackTrace();\r\n                    }\r\n\r\n                }\r\n\r\n            }\r\n        });\r\n\r\n        eliminarButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                Bibliotecas.removeItem(Bibliotecas.getSelectedItem());\r\n            }\r\n        });\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Client/Client.java b/src/Client/Client.java
+--- a/src/Client/Client.java	(revision 7fc9559b4525a4e6c7babd875bc3301e9f141bcd)
++++ b/src/Client/Client.java	(date 1666659159746)
+@@ -62,7 +62,7 @@
+             public void actionPerformed(ActionEvent e) {
+                 JFileChooser fc = new JFileChooser();
+ 
+-                FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT" ,"txt");
++                FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT" ,"txt","pdf");
+                 fc.setFileFilter(filtro);
+                 int selection = fc.showOpenDialog(fc);
+                 if(selection == JFileChooser.APPROVE_OPTION){
+@@ -77,25 +77,17 @@
+                         while(valor != -1){
+                             cadena = cadena + (char) valor;
+                             valor = fr.read();
+-                            if(cadena.contains(" ")){
+-                                //System.out.println(cadena.replace(" ",""));
+-                                Palabra = cadena.replace(" ","");
+-                                sockets();
+-                                cadena = "";
+-
+-                            }
++                        }
+ 
+-                        }
+                         //textArea.setText(cadena);
+                         Bibliotecas.addItem(fichero);
+-                        Palabra = cadena.replace(" ","");
++                        Palabra = cadena;
++                        System.out.println(Palabra);
+                         sockets();
+ 
+                     }catch (IOException e1){e1.getStackTrace();
+                     }
+-
+                 }
+-
+             }
+         });
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d3c922a9-0fa1-45ca-b9aa-b15a59772a85\" name=\"Changes\" comment=\"Se dan detalles a los AVL\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Server/Arboles.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Server/Arboles.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Server/Server.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Server/Server.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2G3liEzK7gsFwxkLcie4AA2ntYM\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [\r\n      &quot;PLAIN_TEXT&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d3c922a9-0fa1-45ca-b9aa-b15a59772a85\" name=\"Changes\" comment=\"\" />\r\n      <created>1665625277784</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1665625277784</updated>\r\n      <workItem from=\"1665625280427\" duration=\"2504000\" />\r\n      <workItem from=\"1665703301665\" duration=\"4338000\" />\r\n      <workItem from=\"1665709413713\" duration=\"2555000\" />\r\n      <workItem from=\"1666481295642\" duration=\"6844000\" />\r\n      <workItem from=\"1666542328364\" duration=\"4252000\" />\r\n      <workItem from=\"1666568207256\" duration=\"2949000\" />\r\n      <workItem from=\"1666629407644\" duration=\"1766000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se crean los mains de ambas apps\">\r\n      <created>1665626178301</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665626178301</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Se crean los mains de ambas apps\">\r\n      <created>1665627690203</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665627690203</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <created>1665707349042</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665707349042</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <created>1665707365289</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665707365289</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <created>1665709470372</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665709470372</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Se prueban las busquedas en el arbol de busqueda\">\r\n      <created>1666497314180</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666497314180</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Se dan detalles a los AVL\">\r\n      <created>1666589778192</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666589778193</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se crean los mains de ambas apps\" />\r\n    <MESSAGE value=\"Se crea la calse del arbol&#10; y los nodo de estos\" />\r\n    <MESSAGE value=\"Se prueban las busquedas en el arbol de busqueda\" />\r\n    <MESSAGE value=\"Se dan detalles a los AVL\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se dan detalles a los AVL\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7fc9559b4525a4e6c7babd875bc3301e9f141bcd)
++++ b/.idea/workspace.xml	(date 1666659526822)
+@@ -4,9 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se dan detalles a los AVL">
++    <list default="true" id="d3c922a9-0fa1-45ca-b9aa-b15a59772a85" name="Changes" comment="Se implementa leer archivos .txt y pasar las palabras mediante sockets">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_10_2022_10_46__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_10_2022_10_46__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_10_2022_17_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_10_2022_17_36__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Server/Arboles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Arboles.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -63,10 +65,7 @@
+       <workItem from="1665625280427" duration="2504000" />
+       <workItem from="1665703301665" duration="4338000" />
+       <workItem from="1665709413713" duration="2555000" />
+-      <workItem from="1666481295642" duration="6844000" />
+-      <workItem from="1666542328364" duration="4252000" />
+-      <workItem from="1666568207256" duration="2949000" />
+-      <workItem from="1666629407644" duration="1766000" />
++      <workItem from="1666481295642" duration="5511000" />
+     </task>
+     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
+       <created>1665626178301</created>
+@@ -103,21 +102,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1665709470372</updated>
+     </task>
+-    <task id="LOCAL-00006" summary="Se prueban las busquedas en el arbol de busqueda">
+-      <created>1666497314180</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1666497314180</updated>
+-    </task>
+-    <task id="LOCAL-00007" summary="Se dan detalles a los AVL">
+-      <created>1666589778192</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1666589778193</updated>
+-    </task>
+-    <option name="localTasksCounter" value="8" />
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -137,8 +122,6 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Se crean los mains de ambas apps" />
+     <MESSAGE value="Se crea la calse del arbol&#10; y los nodo de estos" />
+-    <MESSAGE value="Se prueban las busquedas en el arbol de busqueda" />
+-    <MESSAGE value="Se dan detalles a los AVL" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Se dan detalles a los AVL" />
++    <option name="LAST_COMMIT_MESSAGE" value="Se crea la calse del arbol&#10; y los nodo de estos" />
+   </component>
+ </project>
+\ No newline at end of file

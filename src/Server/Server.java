@@ -15,7 +15,6 @@ import java.util.logging.Logger;
 public class Server {
     private static Arboles Arbol;
     public static void main (String[] args){
-        boolean creando = true;
         ServerSocket serverSocket = null;
         Socket clientSocket = null;
         DataInputStream in;
@@ -37,13 +36,9 @@ public class Server {
                 System.out.println(message);
 
                 out.writeUTF("Message Received");
-                if (message.equals("Buscar")){
-                    creando = false;
-                }else if (creando == true){
-                    crea(message,"archivo.txt");
-                }else if(creando == false){
-                    out.writeUTF("");
-                }
+
+                crea(message,"archivo.txt");
+                buscar("hombres");
                 clientSocket.close();
                 System.out.println("Client disconnected");
             }
@@ -82,10 +77,9 @@ public class Server {
             palabras.add(nuevo);
             Collections.sort(palabras, new ComparaPalabra());
             if (Objects.equals(palabra,current.getPalabra())){
-                //System.out.println("Encontrado, "+String.valueOf(cont));
+                System.out.println("Encontrado, "+String.valueOf(cont));
                 find = true;
-            }else if (palabras.get(0).getPalabra().equals(palabra)){
-
+            } else if (palabras.get(0).getPalabra().equals(palabra)){
                 System.out.println("Izquierda");
                 current = current.getIzquierdo();
             }else if (palabras.get(1).getPalabra().equals(palabra)){
@@ -95,6 +89,5 @@ public class Server {
             cont+=1;
             System.out.println(" ");
         }
-
     }
 }

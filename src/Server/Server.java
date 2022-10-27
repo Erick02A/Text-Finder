@@ -41,7 +41,7 @@ public class Server {
                 System.out.println(message);
 
                 out.writeUTF("Message Received");
-                if (message.equals("Buscar")){
+                if (message.equals("buscar")){
                     creando = false;
                 }else if (creando == true){
                     Gson g = new Gson();

@@ -16,8 +16,16 @@ import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Clase que se encarga de inicair el servidor y con esto esperar a lo que mande el cliente.
+ */
 public class Server {
     private static ListaA lista = new ListaA();
+
+    /**
+     * El main del servidor para que se inicie
+     * @param args
+     */
     public static void main (String[] args){
         boolean creando = true;
         ServerSocket serverSocket = null;
@@ -48,6 +56,7 @@ public class Server {
                 }else if(creando == false){
                     out.writeUTF(buscar(message));
                     System.out.println(buscar(message));
+                    creando = true;//uwu
                 }
                 clientSocket.close();
                 System.out.println("Client disconnected");
@@ -59,6 +68,12 @@ public class Server {
         //System.out.println("Se creo el arbol");
         //buscar("jugar");
     }
+
+    /**
+     * Este metodo se encarga de crear un arbol binario y a la ves mete el arbol en una lista enlasada con el contenido de los archivos que envia el cliente
+     * @param text texto que se encuentra el el archivo
+     * @param archivo el nombre del archivo
+     */
     public static void crea(String text, String archivo){
         Arboles arbol = new Arboles();
         String[] palabras =  text.split(" ");
@@ -77,6 +92,12 @@ public class Server {
         lista.add(a);
         System.out.println("se creo el arbol");
     }
+
+    /**
+     * Metodo que se encarga de buscar una palabra que envie el cliente en los arboles que tenga ya guardados
+     * @param palabra la palabra a buscar
+     * @return
+     */
     public static String buscar(String palabra){
         NodoA current1 = lista.getHead();
         Nodo current = current1.getArbol().getRaiz();

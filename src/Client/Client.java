@@ -12,6 +12,10 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 //import org.apache.poi.xwpf.usermodel.*;
+
+/**
+ * clase que se encarga de inicar y contener al cliente
+ */
 public class Client extends javax.swing.JFrame{
     private JButton eliminarButton;
     private JButton agregarButton;
@@ -30,7 +34,10 @@ public class Client extends javax.swing.JFrame{
     static JFrame frame = new Client("Text Finder");
 
 
-
+    /**
+     * Main del cliente para iniciar el mismo
+     * @param args
+     */
     public static void main(String[] args) {
 
 
@@ -38,6 +45,10 @@ public class Client extends javax.swing.JFrame{
 
     }
 
+    /**
+     * Metodo que se encarga de abrir el socket y enviar  un mensaje al servidor
+     *
+     */
     private void sockets(){
         try {
             Socket clientSocket = new Socket(HOST, PORT);

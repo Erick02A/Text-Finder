@@ -66,7 +66,7 @@ public class Server {
         //System.out.println(palabras[3]);
         int cont = 1;
         for (String i: palabras){
-            //i = i.replaceAll(".","");
+            //i = i.replaceAll(". ","");
             i = i.replaceAll(";","");
             i = i.replaceAll(":","");
             i = i.replaceAll(",","");

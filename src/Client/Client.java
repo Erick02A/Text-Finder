@@ -128,7 +128,15 @@ public class Client extends javax.swing.JFrame{
         eliminarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Bibliotecas.removeItem(Bibliotecas.getSelectedItem());
+                if (Bibliotecas.getSelectedItem() != null) {
+                    Palabra = "eliminar";
+                    sockets();
+                    System.out.println(Bibliotecas.getSelectedItem());
+                    Palabra = (String) Bibliotecas.getSelectedItem();
+                    sockets();
+                    Bibliotecas.removeItem(Bibliotecas.getSelectedItem());
+
+                }else{JOptionPane.showMessageDialog(null,"Seleccione un archivo");}
             }
         });
         buscarButton.addActionListener(new ActionListener() {

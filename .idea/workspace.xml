@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Creacion de la ventana donde apareceran las busquedas">
+    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Json a los PDF">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager">
     <configuration name="Busqueda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client.Busqueda" />
       <module name="Text Finder" />
@@ -176,12 +178,12 @@
       <option name="project" value="LOCAL" />
       <updated>1666916075840</updated>
     </task>
-    <task id="LOCAL-00010" summary="Se dan detalles a los AVL">
-      <created>1666822781465</created>
+    <task id="LOCAL-00010" summary="Json a los PDF">
+      <created>1666929081033</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1666822781465</updated>
+      <updated>1666929081033</updated>
     </task>
     <task id="LOCAL-00011" summary="Se dan detalles a los AVL">
       <created>1666823061204</created>
@@ -190,7 +192,7 @@
       <option name="project" value="LOCAL" />
       <updated>1666823061204</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +215,7 @@
     <MESSAGE value="Se prueban las busquedas en el arbol de busqueda" />
     <MESSAGE value="Se dan detalles a los AVL" />
     <MESSAGE value="Creacion de la ventana donde apareceran las busquedas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion de la ventana donde apareceran las busquedas" />
+    <MESSAGE value="Json a los PDF" />
+    <option name="LAST_COMMIT_MESSAGE" value="Json a los PDF" />
   </component>
 </project>

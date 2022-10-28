@@ -73,7 +73,6 @@ public class Client extends javax.swing.JFrame{
                 int selection = fc.showOpenDialog(fc);
                 if(selection == JFileChooser.APPROVE_OPTION) {
                     File fichero = fc.getSelectedFile();
-                    Bibliotecas.addItem(fichero.getName());
 
                     //textField.setText(fichero.getAbsolutePath());
                     //System.out.println(fc.getName());
@@ -86,7 +85,7 @@ public class Client extends javax.swing.JFrame{
                                 valor = fr.read();
                             }
                             //textArea.setText(cadena);
-                            Bibliotecas.addItem(fichero);
+                            Bibliotecas.addItem(fichero.getName());
                             Archivo a = new Archivo(fichero.getName(),cadena);
                             Gson g = new Gson();
                             String json = g.toJson(a);
@@ -142,10 +141,7 @@ public class Client extends javax.swing.JFrame{
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Palabra = "buscar";
-                sockets();
-                Palabra = textField1.getText();
-                sockets();
+
                 if (textField1.getText().equals("")) {
                     JOptionPane.showMessageDialog(null,"Inserte una palabra para buscar");
 
@@ -153,7 +149,11 @@ public class Client extends javax.swing.JFrame{
                     if(null == Bibliotecas.getSelectedItem()) {
                         JOptionPane.showMessageDialog(null,"Agrege archivos a la biblioteca");
                     }else{
-                        System.out.println(Bibliotecas);
+                        Palabra = "buscar";
+                        sockets();
+                        Palabra = textField1.getText();
+                        sockets();
+
                         new Busqueda("Text Finder");
                         frame.setVisible(false);
                         Busqueda.main(null);

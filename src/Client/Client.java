@@ -48,7 +48,7 @@ public class Client extends javax.swing.JFrame{
             out.writeUTF(Palabra);
 
             String message = in.readUTF();
-            //System.out.println(message);
+            System.out.println(message);
 
             clientSocket.close();
         } catch (IOException e) {
@@ -105,7 +105,10 @@ public class Client extends javax.swing.JFrame{
                             PDDocument pdfDocument = PDDocument.load(fis);
                             //System.out.println(pdfDocument.getPages().getCount());
                             PDFTextStripper pdfTextStripper = new PDFTextStripper();
-                            Palabra = pdfTextStripper.getText(pdfDocument);
+                            Archivo a = new Archivo(fichero.getName(),pdfTextStripper.getText(pdfDocument));
+                            Gson g = new Gson();
+                            String json = g.toJson(a);
+                            Palabra = json;
                             System.out.println(Palabra);
                             sockets();
                             pdfDocument.close();

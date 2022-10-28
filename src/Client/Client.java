@@ -10,7 +10,8 @@ import java.io.*;
 import java.net.Socket;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
-import org.apache.poi.xwpf.usermodel.*;
+
+//import org.apache.poi.xwpf.usermodel.*;
 public class Client extends javax.swing.JFrame{
     private JButton eliminarButton;
     private JButton agregarButton;
@@ -26,11 +27,13 @@ public class Client extends javax.swing.JFrame{
     DataOutputStream out;
     DataInputStream in;
 
+    static JFrame frame = new Client("Text Finder");
+
 
 
     public static void main(String[] args) {
 
-        JFrame frame = new Client("Text Finder");
+
         frame.setVisible(true);
 
     }
@@ -132,6 +135,19 @@ public class Client extends javax.swing.JFrame{
                 sockets();
                 Palabra = textField1.getText();
                 sockets();
+                if (textField1.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null,"Inserte una palabra para buscar");
+
+                }else {
+                    if(null == Bibliotecas.getSelectedItem()) {
+                        JOptionPane.showMessageDialog(null,"Agrege archivos a la biblioteca");
+                    }else{
+                        System.out.println(Bibliotecas);
+                        new Busqueda("Text Finder");
+                        frame.setVisible(false);
+                        Busqueda.main(null);
+                    }
+                }
             }
         });
     }

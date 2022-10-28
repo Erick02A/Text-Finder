@@ -73,10 +73,7 @@ public class Client extends javax.swing.JFrame{
                 int selection = fc.showOpenDialog(fc);
                 if(selection == JFileChooser.APPROVE_OPTION) {
                     File fichero = fc.getSelectedFile();
-                    Bibliotecas.addItem(fichero.getName());
 
-                    //textField.setText(fichero.getAbsolutePath());
-                    //System.out.println(fc.getName());
                     if (fichero.getName().contains(".txt")) {
                         try (FileReader fr = new FileReader(fichero)){
                             String cadena = "";
@@ -85,8 +82,8 @@ public class Client extends javax.swing.JFrame{
                                 cadena = cadena + (char) valor;
                                 valor = fr.read();
                             }
-                            //textArea.setText(cadena);
-                            Bibliotecas.addItem(fichero);
+
+                            Bibliotecas.addItem(fichero.getName());
                             Archivo a = new Archivo(fichero.getName(),cadena);
                             Gson g = new Gson();
                             String json = g.toJson(a);
@@ -103,10 +100,15 @@ public class Client extends javax.swing.JFrame{
                             FileInputStream fis = new FileInputStream(fichero);
 
                             PDDocument pdfDocument = PDDocument.load(fis);
-                            //System.out.println(pdfDocument.getPages().getCount());
                             PDFTextStripper pdfTextStripper = new PDFTextStripper();
-                            Palabra = pdfTextStripper.getText(pdfDocument);
+                            Bibliotecas.addItem(fichero.getName());
+
+                            Archivo a = new Archivo(fichero.getName(),pdfTextStripper.getText(pdfDocument));
+                            Gson g = new Gson();
+                            String json = g.toJson(a);
+                            Palabra = json;
                             System.out.println(Palabra);
+
                             sockets();
                             pdfDocument.close();
                             fis.close();

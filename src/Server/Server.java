@@ -39,8 +39,6 @@ public class Server {
 
                 String message = in.readUTF();
                 System.out.println(message);
-
-                out.writeUTF("Message Received");
                 if (message.equals("buscar")){
                     creando = false;
                 }else if (creando == true){
@@ -49,6 +47,7 @@ public class Server {
                     crea(a.getContenido(),a.getName());
                 }else if(creando == false){
                     out.writeUTF(buscar(message));
+                    System.out.println(buscar(message));
                 }
                 clientSocket.close();
                 System.out.println("Client disconnected");
@@ -91,7 +90,7 @@ public class Server {
             Collections.sort(palabras, new ComparaPalabra());
             if (Objects.equals(palabra,current.getPalabra())){
                 //System.out.println("Encontrado, "+String.valueOf(cont));
-                return "Enccontrado: "+String.valueOf(cont)+", "+current.getOcurrencias()[0]+", "+current.getOcurrencias()[1];
+                return "Enccontrado: "+String.valueOf(cont)+","+current.getOcurrencias()[0]+", "+current.getOcurrencias()[1];
             }else if (palabras.get(0).getPalabra().equals(palabra)){
                 if (current.getIzquierdo()!=null) {
                     System.out.println("Izquierda");

@@ -12,11 +12,10 @@ public class Busqueda extends javax.swing.JFrame{
     private JScrollPane Tabla;
     private JButton Abrir;
     private static String Dato;
-    static JFrame frame = new Busqueda("Text Finder", Dato);
+    private static JFrame frame ;
 
-    public static void main(String[] args) {
+    public static void Main(String[] args){
         frame.setVisible(true);
-
     }
 
     public Busqueda(String title,String Datos) {
@@ -27,7 +26,6 @@ public class Busqueda extends javax.swing.JFrame{
         this.pack();
         System.out.println(Datos);
         createTable();
-
 
         //table1.addColumn("Nombre del archivo");
         ButtonVolver.addActionListener(new ActionListener() {
@@ -46,7 +44,16 @@ public class Busqueda extends javax.swing.JFrame{
         });
     }
     private void createTable(){
-        Object[][] data ={{"dsgd","1","2"},{"pdf","1","2"},{"pdf","1","2"}};
+        System.out.println(Dato);
+        Object[][] data = new Object[0][];
+        String[] finds = Dato.split(":");
+        for (int i=0;i<finds.length;i++) {
+            String[] dats = finds[i].split(",");
+            data[i][0] = dats[0];
+            data[i][1] = dats[1];
+            data[i][2] = dats[2];
+
+        }
         table1.setModel(new DefaultTableModel(
                 data,
                 new String[]{"Nombre del pdf","Posicion de la palabra","Comparaciones"}

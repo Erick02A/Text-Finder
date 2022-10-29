@@ -39,12 +39,8 @@ public class Client extends javax.swing.JFrame{
      * @param args
      */
     public static void main(String[] args) {
-
-
         frame.setVisible(true);
-
     }
-
     /**
      * Metodo que se encarga de abrir el socket y enviar  un mensaje al servidor
      *
@@ -63,7 +59,6 @@ public class Client extends javax.swing.JFrame{
                 System.out.println(message);
                 new Busqueda("Text Finder", message);
                 frame.setVisible(false);
-                Busqueda.main(null);
             }else{
                 System.out.println(message);
                 clientSocket.close();}
@@ -90,7 +85,6 @@ public class Client extends javax.swing.JFrame{
                 int selection = fc.showOpenDialog(fc);
                 if(selection == JFileChooser.APPROVE_OPTION) {
                     File fichero = fc.getSelectedFile();
-
                     //textField.setText(fichero.getAbsolutePath());
                     //System.out.println(fc.getName());
                     if (fichero.getName().contains(".txt")) {

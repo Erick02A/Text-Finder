@@ -110,10 +110,11 @@ public class Server {
             Collections.sort(palabras, new ComparaPalabra());
             if (Objects.equals(palabra,current.getPalabra())){
                 //System.out.println("Encontrado, "+String.valueOf(cont));
-                mesage+= "Encontrado:"+String.valueOf(cont)+","+current.getOcurrencias()[0]+","+current.getOcurrencias()[1]+"\n";
                 if (current.getIzquierdo()!=null) {
+                    mesage+= String.valueOf(cont)+","+current.getOcurrencias()[0]+","+current.getOcurrencias()[1]+":";
                     current = current.getIzquierdo();
                 }else {
+                    mesage+= String.valueOf(cont)+","+current.getOcurrencias()[0]+","+current.getOcurrencias()[1];
                     bandera = false;
                 }
             }else if (palabras.get(0).getPalabra().equals(palabra)){

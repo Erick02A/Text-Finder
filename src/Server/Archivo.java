@@ -1,5 +1,8 @@
 package Server;
 
+/**
+ * Esta clase se encarga de crear un objeto tipo archivo para guardarlo en el json
+ */
 public class Archivo {
     private String name;
     private String contenido;

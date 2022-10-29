@@ -10,6 +10,7 @@ public class Busqueda extends javax.swing.JFrame{
     private JTable table1;
     private JButton ButtonVolver;
     private JScrollPane Tabla;
+    private JButton Abrir;
     private static String Dato = "Hola";
     static JFrame frame = new Busqueda("Text Finder", Dato);
 
@@ -25,7 +26,7 @@ public class Busqueda extends javax.swing.JFrame{
         this.setContentPane(Panel2);
         this.pack();
         System.out.println(Datos);
-        //createTable();
+        createTable();
 
 
         //table1.addColumn("Nombre del archivo");
@@ -35,6 +36,12 @@ public class Busqueda extends javax.swing.JFrame{
                 new Client("Text Finder");
                 frame.dispose();
                 Client.main(null);
+            }
+        });
+        Abrir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(Datos);
             }
         });
     }

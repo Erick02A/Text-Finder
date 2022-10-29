@@ -171,11 +171,11 @@ public class Client extends javax.swing.JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (Bibliotecas.getSelectedItem() != null) {
-                    Palabra = "eliminar";
-                    sockets();
-                    System.out.println(Bibliotecas.getSelectedItem());
-                    Palabra = (String) Bibliotecas.getSelectedItem();
-                    sockets();
+                    //Palabra = "eliminar";
+                    //sockets();
+                    //System.out.println(Bibliotecas.getSelectedItem());
+                    //Palabra = (String) Bibliotecas.getSelectedItem();
+                    //sockets();
                     Bibliotecas.removeItem(Bibliotecas.getSelectedItem());
 
                 }else{JOptionPane.showMessageDialog(null,"Seleccione un archivo");}

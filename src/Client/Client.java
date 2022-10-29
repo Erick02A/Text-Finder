@@ -8,8 +8,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.Socket;
+import java.util.List;
+
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 
 //import org.apache.poi.xwpf.usermodel.*;
 
@@ -116,7 +120,7 @@ public class Client extends javax.swing.JFrame{
                             PDDocument pdfDocument = PDDocument.load(fis);
                             //System.out.println(pdfDocument.getPages().getCount());
                             PDFTextStripper pdfTextStripper = new PDFTextStripper();
-                            Archivo a = new Archivo(fichero.getName(),pdfTextStripper.getText(pdfDocument));
+                            Archivo a = new Archivo(fichero.getName(), pdfTextStripper.getText(pdfDocument));
                             Gson g = new Gson();
                             String json = g.toJson(a);
                             Palabra = json;
@@ -124,8 +128,32 @@ public class Client extends javax.swing.JFrame{
                             sockets();
                             pdfDocument.close();
                             fis.close();
-
                         } catch (IOException ex) {
+                            throw new RuntimeException(ex);
+                        }
+
+                    }else if (fichero.getName().contains(".docx")){
+                            try {
+                                Bibliotecas.addItem(fichero.getName());
+                                FileInputStream fis = new FileInputStream(fichero);
+
+                                XWPFDocument docx = new XWPFDocument(fis);
+                                List<XWPFParagraph> paragraphsList = docx.getParagraphs();
+                                String line = System.getProperty("line.separator");
+
+                                for (XWPFParagraph paragraph: paragraphsList) {
+                                    String[] Palabras = paragraph.getText().replaceAll(line,"").split(" ");
+                                    System.out.println(Palabras);
+                                }
+
+                                Archivo a = new Archivo(fichero.getName(), Palabra);
+                                Gson g = new Gson();
+                                String json = g.toJson(a);
+                                Palabra = json;
+                                System.out.println(Palabra);
+                                sockets();
+
+                            }catch (IOException ex) {
                             throw new RuntimeException(ex);
                         }
                     }else{

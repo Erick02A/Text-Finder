@@ -20,7 +20,8 @@ import java.util.logging.Logger;
  * Clase que se encarga de inicair el servidor y con esto esperar a lo que mande el cliente.
  */
 public class Server {
-    private static ListaA lista = new ListaA();
+    private static Arboles arbol = new Arboles();
+    private static ArbolAVL arbolAVL = new ArbolAVL();
 
     /**
      * El main del servidor para que se inicie
@@ -75,7 +76,6 @@ public class Server {
      * @param archivo el nombre del archivo
      */
     public static void crea(String text, String archivo){
-        Arboles arbol = new Arboles();
         String[] palabras =  text.split(" ");
         //System.out.println(palabras[3]);
         int cont = 1;
@@ -88,8 +88,6 @@ public class Server {
             arbol.addNodo(i, new String[]{String.valueOf(cont), archivo});
             cont+=1;
         }
-        NodoA a = new NodoA(arbol);
-        lista.add(a);
         System.out.println("se creo el arbol");
     }
 
@@ -101,8 +99,7 @@ public class Server {
     public static String buscar(String palabra){
         String mesage = "";
         boolean bandera = true;
-        NodoA current1 = lista.getHead();
-        Nodo current = current1.getArbol().getRaiz();
+        Nodo current = arbol.getRaiz();
         int cont = 1;
         Nodo nuevo = new Nodo(palabra,new String[] {""});
         while (bandera){
@@ -113,45 +110,25 @@ public class Server {
             Collections.sort(palabras, new ComparaPalabra());
             if (Objects.equals(palabra,current.getPalabra())){
                 //System.out.println("Encontrado, "+String.valueOf(cont));
-                mesage+= "Enccontrado:"+String.valueOf(cont)+","+current.getOcurrencias()[0]+","+current.getOcurrencias()[1]+"\n";
+                mesage+= "Encontrado:"+String.valueOf(cont)+","+current.getOcurrencias()[0]+","+current.getOcurrencias()[1]+"\n";
                 if (current.getIzquierdo()!=null) {
                     current = current.getIzquierdo();
                 }else {
-                    if (current1.getNext()!=null){
-                        current1 = current1.getNext();
-                        current = current1.getArbol().getRaiz();
-                    }else {
-                        bandera = false;
-                    }
+                    bandera = false;
                 }
             }else if (palabras.get(0).getPalabra().equals(palabra)){
                 if (current.getIzquierdo()!=null) {
                     System.out.println("Izquierda");
                     current = current.getIzquierdo();
                 } else {
-                    System.out.println("Cambia Arbol");
-                    if (current1.getNext()!=null) {
-                        current1 = current1.getNext();
-                        current = current1.getArbol().getRaiz();
-                    }else {
-                        //System.out.println("no se encontro");
-                        bandera = false;
-
-                    }
+                    bandera = false;
                 }
             }else if (palabras.get(1).getPalabra().equals(palabra)){
                 if (current.getDerecho()!=null) {
                     System.out.println("Derecha");
                     current = current.getDerecho();
                 }else {
-                    System.out.println("Cambia Arbol");
-                    if (current1.getNext()!=null) {
-                        current1 = current1.getNext();
-                        current = current1.getArbol().getRaiz();
-                    }else {
-                        //System.out.println("no se encontro");
-                        bandera = false;
-                    }
+                    bandera = false;
                 }
             }
             cont+=1;

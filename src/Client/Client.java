@@ -38,6 +38,10 @@ public class Client extends javax.swing.JFrame{
     DataOutputStream out;
     DataInputStream in;
 
+    public static String getPalabra() {
+        return Palabra;
+    }
+
     static JFrame frame = new Client("Text Finder");
 
 
@@ -54,6 +58,7 @@ public class Client extends javax.swing.JFrame{
      */
     private void sockets(){
         try {
+            String message = null;
             Socket clientSocket = new Socket(HOST, PORT);
 
             in = new DataInputStream(clientSocket.getInputStream());
@@ -61,10 +66,11 @@ public class Client extends javax.swing.JFrame{
 
             out.writeUTF(Palabra);
 
-            String message = in.readUTF();
+             message = in.readUTF();
             if (message != null) {
+                Palabra=message;
                 System.out.println(message);
-                new Busqueda("Text Finder", message);
+                Busqueda.main(null);
                 frame.setVisible(false);
             }else{
                 System.out.println(message);
@@ -87,7 +93,7 @@ public class Client extends javax.swing.JFrame{
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fc = new JFileChooser();
 
-                FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT *.PDF" ,"txt","pdf","docx");
+                FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT *.PDF *.DOCX" ,"txt","pdf","docx");
                 fc.setFileFilter(filtro);
                 int selection = fc.showOpenDialog(fc);
                 if(selection == JFileChooser.APPROVE_OPTION) {
@@ -123,7 +129,7 @@ public class Client extends javax.swing.JFrame{
                             PDDocument pdfDocument = PDDocument.load(fis);
                             //System.out.println(pdfDocument.getPages().getCount());
                             PDFTextStripper pdfTextStripper = new PDFTextStripper();
-                            Archivo a = new Archivo(fichero.getName(), pdfTextStripper.getText(pdfDocument));
+                            Archivo a = new Archivo(fichero.getName(), pdfTextStripper.getText(pdfDocument).replaceAll("\r\n"," "));
                             Gson g = new Gson();
                             String json = g.toJson(a);
                             Palabra = json;
@@ -143,7 +149,7 @@ public class Client extends javax.swing.JFrame{
                                 String docText = xwpfWordExtractor.getText();
                                 Palabra = docText.replaceAll("\n"," ");
 
-                                Archivo a = new Archivo(fichero.getName(), docText);
+                                Archivo a = new Archivo(fichero.getName(), Palabra);
                                 Gson g = new Gson();
                                 String json = g.toJson(a);
                                 Palabra = json;

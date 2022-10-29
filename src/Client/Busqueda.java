@@ -12,9 +12,10 @@ public class Busqueda extends javax.swing.JFrame{
     private JScrollPane Tabla;
     private JButton Abrir;
     private static String Dato;
-    private static JFrame frame ;
+    private static JFrame frame;
 
     public static void main(String[] args){
+        frame = new Busqueda("Text Finder", Client.getPalabra());
         frame.setVisible(true);
     }
 
@@ -25,8 +26,10 @@ public class Busqueda extends javax.swing.JFrame{
         this.setContentPane(Panel2);
         this.pack();
         Dato = Datos;
-        frame = new Busqueda("Text Finder", Dato);
+
         System.out.println("Prueba: " + Datos);
+
+
 
         createTable();
 
@@ -34,8 +37,9 @@ public class Busqueda extends javax.swing.JFrame{
         ButtonVolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Client("Text Finder");
+                //new Client("Text Finder");
                 frame.dispose();
+                frame.remove(frame);
                 Client.main(null);
             }
         });
@@ -45,16 +49,19 @@ public class Busqueda extends javax.swing.JFrame{
                 System.out.println(Datos);
             }
         });
+
+
+
     }
-    private void createTable(){
-        System.out.println(Dato);
-        Object[][] data = new Object[0][];
+    public void createTable(){
+
         String[] finds = Dato.split(":");
+        Object[][] data = new Object[finds.length][3];
         for (int i=0;i<finds.length;i++) {
             String[] dats = finds[i].split(",");
-            data[i][0] = dats[0];
+            data[i][0] = dats[2];
             data[i][1] = dats[1];
-            data[i][2] = dats[2];
+            data[i][2] = dats[0];
 
         }
         table1.setModel(new DefaultTableModel(
@@ -62,8 +69,8 @@ public class Busqueda extends javax.swing.JFrame{
                 new String[]{"Nombre del pdf","Posicion de la palabra","Comparaciones"}
 
         ));
-
     }
+
 
 
 

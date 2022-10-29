@@ -14,7 +14,7 @@ public class Busqueda extends javax.swing.JFrame{
     private static String Dato;
     private static JFrame frame ;
 
-    public static void Main(String[] args){
+    public static void main(String[] args){
         frame.setVisible(true);
     }
 

@@ -13,7 +13,10 @@ import java.util.List;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 //import org.apache.poi.xwpf.usermodel.*;
 
@@ -133,20 +136,14 @@ public class Client extends javax.swing.JFrame{
                         }
 
                     }else if (fichero.getName().contains(".docx")){
-                            try {
+                            try (XWPFDocument doc = new XWPFDocument(
+                                    Files.newInputStream(fichero.toPath()))){
                                 Bibliotecas.addItem(fichero.getName());
-                                FileInputStream fis = new FileInputStream(fichero);
+                                XWPFWordExtractor xwpfWordExtractor = new XWPFWordExtractor(doc);
+                                String docText = xwpfWordExtractor.getText();
+                                Palabra = docText.replaceAll("\n"," ");
 
-                                XWPFDocument docx = new XWPFDocument(fis);
-                                List<XWPFParagraph> paragraphsList = docx.getParagraphs();
-                                String line = System.getProperty("line.separator");
-
-                                for (XWPFParagraph paragraph: paragraphsList) {
-                                    String[] Palabras = paragraph.getText().replaceAll(line,"").split(" ");
-                                    System.out.println(Palabras);
-                                }
-
-                                Archivo a = new Archivo(fichero.getName(), Palabra);
+                                Archivo a = new Archivo(fichero.getName(), docText);
                                 Gson g = new Gson();
                                 String json = g.toJson(a);
                                 Palabra = json;

@@ -59,9 +59,15 @@ public class Client extends javax.swing.JFrame{
             out.writeUTF(Palabra);
 
             String message = in.readUTF();
-            System.out.println(message);
+            if (message != null) {
+                System.out.println(message);
+                new Busqueda("Text Finder", message);
+                frame.setVisible(false);
+                Busqueda.main(null);
+            }else{
+                System.out.println(message);
+                clientSocket.close();}
 
-            clientSocket.close();
         } catch (IOException e) {
             System.out.println(e);
         }
@@ -110,6 +116,7 @@ public class Client extends javax.swing.JFrame{
 
                     }else if (fichero.getName().contains(".pdf")){
                         try {
+                            Bibliotecas.addItem(fichero.getName());
                             FileInputStream fis = new FileInputStream(fichero);
 
                             PDDocument pdfDocument = PDDocument.load(fis);
@@ -165,9 +172,7 @@ public class Client extends javax.swing.JFrame{
                         Palabra = textField1.getText();
                         sockets();
 
-                        new Busqueda("Text Finder");
-                        frame.setVisible(false);
-                        Busqueda.main(null);
+
                     }
                 }
             }

@@ -11,7 +11,7 @@ public class Busqueda extends javax.swing.JFrame{
     private JButton ButtonVolver;
     private JScrollPane Tabla;
     private JButton Abrir;
-    private static String Dato = "Hola";
+    private static String Dato;
     static JFrame frame = new Busqueda("Text Finder", Dato);
 
     public static void main(String[] args) {
@@ -46,8 +46,9 @@ public class Busqueda extends javax.swing.JFrame{
         });
     }
     private void createTable(){
+        Object[][] data ={{"dsgd","1","2"},{"pdf","1","2"},{"pdf","1","2"}};
         table1.setModel(new DefaultTableModel(
-                null,
+                data,
                 new String[]{"Nombre del pdf","Posicion de la palabra","Comparaciones"}
 
         ));

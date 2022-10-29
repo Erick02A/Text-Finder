@@ -24,7 +24,10 @@ public class Busqueda extends javax.swing.JFrame{
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(Panel2);
         this.pack();
-        System.out.println(Datos);
+        Dato = Datos;
+        frame = new Busqueda("Text Finder", Dato);
+        System.out.println("Prueba: " + Datos);
+
         createTable();
 
         //table1.addColumn("Nombre del archivo");

@@ -99,11 +99,13 @@ public class Server {
      * @return
      */
     public static String buscar(String palabra){
+        String mesage = "";
+        boolean bandera = true;
         NodoA current1 = lista.getHead();
         Nodo current = current1.getArbol().getRaiz();
         int cont = 1;
         Nodo nuevo = new Nodo(palabra,new String[] {""});
-        while (true){
+        while (bandera){
             List<Nodo> palabras = new ArrayList<>();
             palabras.add(current);
             System.out.println(current.getPalabra());
@@ -111,7 +113,17 @@ public class Server {
             Collections.sort(palabras, new ComparaPalabra());
             if (Objects.equals(palabra,current.getPalabra())){
                 //System.out.println("Encontrado, "+String.valueOf(cont));
-                return "Enccontrado: "+String.valueOf(cont)+","+current.getOcurrencias()[0]+", "+current.getOcurrencias()[1];
+                mesage+= "Enccontrado:"+String.valueOf(cont)+","+current.getOcurrencias()[0]+","+current.getOcurrencias()[1]+"\n";
+                if (current.getIzquierdo()!=null) {
+                    current = current.getIzquierdo();
+                }else {
+                    if (current1.getNext()!=null){
+                        current1 = current1.getNext();
+                        current = current1.getArbol().getRaiz();
+                    }else {
+                        bandera = false;
+                    }
+                }
             }else if (palabras.get(0).getPalabra().equals(palabra)){
                 if (current.getIzquierdo()!=null) {
                     System.out.println("Izquierda");
@@ -123,7 +135,8 @@ public class Server {
                         current = current1.getArbol().getRaiz();
                     }else {
                         //System.out.println("no se encontro");
-                        return "No se encontro";
+                        bandera = false;
+
                     }
                 }
             }else if (palabras.get(1).getPalabra().equals(palabra)){
@@ -137,13 +150,14 @@ public class Server {
                         current = current1.getArbol().getRaiz();
                     }else {
                         //System.out.println("no se encontro");
-                        return "No se encontro";
+                        bandera = false;
                     }
                 }
             }
             cont+=1;
             System.out.println(" ");
         }
+        return mesage;
 
     }
 }

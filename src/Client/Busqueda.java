@@ -47,10 +47,8 @@ public class Busqueda extends javax.swing.JFrame{
         Abrir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(Datos);
 
-                String[] finds = Datos.split(":");
-                System.out.println(table1.getSelectedRow());
+                String[] finds = Datos.split("¬");
                 String url = "";
                 int i = 0;
                 boolean f = true;
@@ -58,8 +56,7 @@ public class Busqueda extends javax.swing.JFrame{
                 while(f) {
                     if (i == (table1.getSelectedRow())) {
                         String[] dats = finds[i].split(",");
-                        url = dats[0];
-                        System.out.println(url);
+                        url = dats[3];
                         f = false;
                     }
                     i++;
@@ -67,7 +64,7 @@ public class Busqueda extends javax.swing.JFrame{
 
 
                 ProcessBuilder p = new ProcessBuilder();
-                p.command("cmd.exe","/c","C:\\Users\\andre\\Desktop\\prueba.docx");
+                p.command("cmd.exe","/c",url);
                 try {
                     p.start();
                 } catch (IOException ex) {
@@ -79,13 +76,13 @@ public class Busqueda extends javax.swing.JFrame{
     }
     public void createTable(){
 
-        String[] finds = Dato.split(":");
+        String[] finds = Dato.split("¬");
         Object[][] data = new Object[finds.length][3];
         for (int i=0;i<finds.length;i++) {
             String[] dats = finds[i].split(",");
-            data[i][0] = dats[2];
-            data[i][1] = dats[1];
             data[i][2] = dats[0];
+            data[i][1] = dats[1];
+            data[i][0] = dats[2];
 
         }
         table1.setModel(new DefaultTableModel(

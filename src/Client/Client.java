@@ -66,19 +66,24 @@ public class Client extends javax.swing.JFrame{
 
             out.writeUTF(Palabra);
 
-             message = in.readUTF();
-            if (message != null) {
-                Palabra=message;
-                System.out.println(message);
-                Busqueda.main(null);
-                frame.setVisible(false);
-            }else{
-                System.out.println(message);
-                clientSocket.close();}
+            message = in.readUTF();
+            if (message == "NoEncontro") {
+                JOptionPane.showMessageDialog(null,"No se encontraron resultados");
 
-        } catch (IOException e) {
-            System.out.println(e);
-        }
+            }else if (message != null && message != "NoEncontro") {
+                    Palabra = message;
+                    System.out.println(message);
+                    Busqueda.main(null);
+                    frame.setVisible(false);
+                } else {
+                    System.out.println(message);
+                    clientSocket.close();
+                }
+
+            } catch(IOException e){
+                System.out.println(e);
+            }
+
 
     }
     public Client(String title){
@@ -108,7 +113,7 @@ public class Client extends javax.swing.JFrame{
                             }
                             //textArea.setText(cadena);
                             Bibliotecas.addItem(fichero.getName());
-                            Archivo a = new Archivo(fichero.getName(),cadena);
+                            Archivo a = new Archivo(fichero.getName()+","+fichero,cadena);
                             Gson g = new Gson();
                             String json = g.toJson(a);
                             Palabra = json;
@@ -127,7 +132,7 @@ public class Client extends javax.swing.JFrame{
                             PDDocument pdfDocument = PDDocument.load(fis);
                             //System.out.println(pdfDocument.getPages().getCount());
                             PDFTextStripper pdfTextStripper = new PDFTextStripper();
-                            Archivo a = new Archivo(fichero.getName(), pdfTextStripper.getText(pdfDocument).replaceAll("\r\n"," "));
+                            Archivo a = new Archivo(fichero.getName()+","+fichero, pdfTextStripper.getText(pdfDocument).replaceAll("\r\n"," "));
                             Gson g = new Gson();
                             String json = g.toJson(a);
                             Palabra = json;
@@ -147,7 +152,7 @@ public class Client extends javax.swing.JFrame{
                                 String docText = xwpfWordExtractor.getText();
                                 Palabra = docText.replaceAll("\n"," ");
 
-                                Archivo a = new Archivo(fichero.getName(), Palabra);
+                                Archivo a = new Archivo(fichero.getName()+","+fichero, Palabra);
                                 Gson g = new Gson();
                                 String json = g.toJson(a);
                                 Palabra = json;

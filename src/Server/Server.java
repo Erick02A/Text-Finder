@@ -111,7 +111,7 @@ public class Server {
             if (Objects.equals(palabra,current.getPalabra())){
                 //System.out.println("Encontrado, "+String.valueOf(cont));
                 if (current.getIzquierdo()!=null) {
-                    mesage+= String.valueOf(cont)+","+current.getOcurrencias()[0]+","+current.getOcurrencias()[1]+":";
+                    mesage+= String.valueOf(cont)+","+current.getOcurrencias()[0]+","+current.getOcurrencias()[1]+"¬";
                     current = current.getIzquierdo();
                 }else {
                     mesage+= String.valueOf(cont)+","+current.getOcurrencias()[0]+","+current.getOcurrencias()[1];

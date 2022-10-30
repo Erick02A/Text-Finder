@@ -132,8 +132,11 @@ public class Server {
                     bandera = false;
                 }
             }
-            cont+=1;
+            cont++;
             System.out.println(" ");
+        }
+        if (mesage.equals("")) {
+            mesage= "No encontrado";
         }
         return mesage;
 

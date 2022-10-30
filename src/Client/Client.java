@@ -98,8 +98,6 @@ public class Client extends javax.swing.JFrame{
                 int selection = fc.showOpenDialog(fc);
                 if(selection == JFileChooser.APPROVE_OPTION) {
                     File fichero = fc.getSelectedFile();
-                    //textField.setText(fichero.getAbsolutePath());
-                    //System.out.println(fc.getName());
                     if (fichero.getName().contains(".txt")) {
                         try (FileReader fr = new FileReader(fichero)){
                             String cadena = "";

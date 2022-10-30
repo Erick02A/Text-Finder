@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class Busqueda extends javax.swing.JFrame{
     private JPanel Panel2;
@@ -47,10 +48,33 @@ public class Busqueda extends javax.swing.JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println(Datos);
+
+                String[] finds = Datos.split(":");
+                System.out.println(table1.getSelectedRow());
+                String url = "";
+                int i = 0;
+                boolean f = true;
+
+                while(f) {
+                    if (i == (table1.getSelectedRow())) {
+                        String[] dats = finds[i].split(",");
+                        url = dats[0];
+                        System.out.println(url);
+                        f = false;
+                    }
+                    i++;
+                }
+
+
+                ProcessBuilder p = new ProcessBuilder();
+                p.command("cmd.exe","/c","C:\\Users\\andre\\Desktop\\prueba.docx");
+                try {
+                    p.start();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
-
-
 
     }
     public void createTable(){

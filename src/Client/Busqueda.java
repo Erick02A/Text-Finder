@@ -56,7 +56,7 @@ public class Busqueda extends javax.swing.JFrame{
                 while(f) {
                     if (i == (table1.getSelectedRow())) {
                         String[] dats = finds[i].split(",");
-                        url = dats[3];
+                        url = dats[4];
                         f = false;
                     }
                     i++;

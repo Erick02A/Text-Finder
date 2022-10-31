@@ -189,7 +189,7 @@ public class Server {
             for (String a: partes2) {
                 for (String b:partes){
                     String[] apartes = a.split(",");
-                    String[] bpartes = b.split("b");
+                    String[] bpartes = b.split(",");
                     if ((apartes[1].equals(bpartes[1]))&&(apartes[2].equals(bpartes[2]))){
                         mesagefinal += bpartes[0]+","+a+"¬";
                     }

@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.Socket;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.FileTime;
 import java.util.List;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -79,9 +81,9 @@ public class Client extends javax.swing.JFrame{
                 clientSocket.close();
             }
 
-            } catch(IOException e){
-                System.out.println(e);
-            }
+        } catch(IOException e){
+            System.out.println(e);
+        }
 
 
     }
@@ -119,14 +121,18 @@ public class Client extends javax.swing.JFrame{
                             System.out.println(Palabra);
                             sockets();
 
-                            } catch (IOException e1) {
-                                e1.getStackTrace();
-                            }
+                        } catch (IOException e1) {
+                            e1.getStackTrace();
+                        }
 
                     }else if (fichero.getName().contains(".pdf")){
                         try {
                             Bibliotecas.addItem(fichero.getName());
                             FileInputStream fis = new FileInputStream(fichero);
+
+                            BasicFileAttributes attrs = Files.readAttributes(fichero.toPath(), BasicFileAttributes.class);
+                            FileTime time = attrs.creationTime();
+                            System.out.println(time);
 
                             PDDocument pdfDocument = PDDocument.load(fis);
                             //System.out.println(pdfDocument.getPages().getCount());
@@ -144,21 +150,21 @@ public class Client extends javax.swing.JFrame{
                         }
 
                     }else if (fichero.getName().contains(".docx")){
-                            try (XWPFDocument doc = new XWPFDocument(
-                                    Files.newInputStream(fichero.toPath()))){
-                                Bibliotecas.addItem(fichero.getName());
-                                XWPFWordExtractor xwpfWordExtractor = new XWPFWordExtractor(doc);
-                                String docText = xwpfWordExtractor.getText();
-                                Palabra = docText.replaceAll("\n"," ");
+                        try (XWPFDocument doc = new XWPFDocument(
+                                Files.newInputStream(fichero.toPath()))){
+                            Bibliotecas.addItem(fichero.getName());
+                            XWPFWordExtractor xwpfWordExtractor = new XWPFWordExtractor(doc);
+                            String docText = xwpfWordExtractor.getText();
+                            Palabra = docText.replaceAll("\n"," ");
 
-                                Archivo a = new Archivo(fichero.getName()+","+fichero, Palabra);
-                                Gson g = new Gson();
-                                String json = g.toJson(a);
-                                Palabra = json;
-                                System.out.println(Palabra);
-                                sockets();
+                            Archivo a = new Archivo(fichero.getName()+","+fichero, Palabra);
+                            Gson g = new Gson();
+                            String json = g.toJson(a);
+                            Palabra = json;
+                            System.out.println(Palabra);
+                            sockets();
 
-                            }catch (IOException ex) {
+                        }catch (IOException ex) {
                             throw new RuntimeException(ex);
                         }
                     }else{

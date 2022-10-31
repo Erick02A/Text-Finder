@@ -97,10 +97,10 @@ public class Server {
      * @param palabra la palabra a buscar
      * @return
      */
-    public static String buscar(String palabra){
+    public static String buscar_aux(String palabra){
         String mesage = "";
         boolean bandera = true;
-        Nodo current = arbolAVL.getRaiz();
+        Nodo current = arbol.getRaiz();
         int cont = 1;
         Nodo nuevo = new Nodo(palabra,new String[] {""});
         while (bandera){
@@ -141,5 +141,63 @@ public class Server {
         }
         return mesage;
 
+    }
+    public static String buscar(String palabra){
+        String mesage2 = buscar_aux(palabra);
+        String mesage = "";
+        String mesagefinal = "";
+        if (!Objects.equals(mesage2,"No encontrado")) {
+            boolean bandera = true;
+            Nodo current = arbolAVL.getRaiz();
+            int cont = 1;
+            Nodo nuevo = new Nodo(palabra, new String[]{""});
+            while (bandera) {
+                List<Nodo> palabras = new ArrayList<>();
+                palabras.add(current);
+                System.out.println(current.getPalabra());
+                palabras.add(nuevo);
+                Collections.sort(palabras, new ComparaPalabra());
+                if (Objects.equals(palabra, current.getPalabra())) {
+                    //System.out.println("Encontrado, "+String.valueOf(cont));
+                    if (current.getIzquierdo() != null) {
+                        mesage += String.valueOf(cont) + "," + current.getOcurrencias()[0] + "," + current.getOcurrencias()[1] + "¬";
+                        current = current.getIzquierdo();
+                    } else {
+                        mesage += String.valueOf(cont) + "," + current.getOcurrencias()[0] + "," + current.getOcurrencias()[1];
+                        bandera = false;
+                    }
+                } else if (palabras.get(0).getPalabra().equals(palabra)) {
+                    if (current.getIzquierdo() != null) {
+                        System.out.println("Izquierda");
+                        current = current.getIzquierdo();
+                    } else {
+                        bandera = false;
+                    }
+                } else if (palabras.get(1).getPalabra().equals(palabra)) {
+                    if (current.getDerecho() != null) {
+                        System.out.println("Derecha");
+                        current = current.getDerecho();
+                    } else {
+                        bandera = false;
+                    }
+                }
+                cont++;
+                System.out.println(" ");
+            }
+            String[] partes2 = mesage2.split("¬");
+            String[] partes = mesage.split("¬");
+            for (String a: partes2) {
+                for (String b:partes){
+                    String[] apartes = a.split(",");
+                    String[] bpartes = b.split("b");
+                    if ((apartes[1].equals(bpartes[1]))&&(apartes[2].equals(bpartes[2]))){
+                        mesagefinal += bpartes[0]+","+a+"¬";
+                    }
+                }
+            }
+            return mesagefinal;
+        }else {
+            return mesage2;
+        }
     }
 }

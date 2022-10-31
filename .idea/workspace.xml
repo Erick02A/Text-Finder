@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="implementacion de .docx">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2022_20_44_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2022_20_44__Changes_.xml" beforeDir="false" />
+    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Se implementa el Avl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/ArbolAVL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ArbolAVL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Nodo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Busqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Busqueda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <list id="39453c1c-c286-43f9-a7fb-c63d5498e7fc" name="Changes by abarc" comment="" />
@@ -139,7 +135,8 @@
       <workItem from="1667076485722" duration="5211000" />
       <workItem from="1667082850513" duration="3668000" />
       <workItem from="1667192999059" duration="2548000" />
-      <workItem from="1667202919695" duration="2912000" />
+      <workItem from="1667202919695" duration="3548000" />
+      <workItem from="1667234262850" duration="3615000" />
     </task>
     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
       <created>1665626178301</created>
@@ -246,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667172786789</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Se implementa el Avl">
+      <created>1667205887482</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1667205887482</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +277,8 @@
     <MESSAGE value="uis" />
     <MESSAGE value="se muestra en pantalla los archivos donde se encuentran las busquedas" />
     <MESSAGE value="implementacion de .docx" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacion de .docx" />
+    <MESSAGE value="Se implementa el Avl" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se implementa el Avl" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

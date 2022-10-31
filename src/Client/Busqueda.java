@@ -77,17 +77,18 @@ public class Busqueda extends javax.swing.JFrame{
     public void createTable(){
 
         String[] finds = Dato.split("¬");
-        Object[][] data = new Object[finds.length][3];
+        Object[][] data = new Object[finds.length][4];
         for (int i=0;i<finds.length;i++) {
             String[] dats = finds[i].split(",");
-            data[i][2] = dats[0];
-            data[i][1] = dats[1];
-            data[i][0] = dats[2];
+            data[i][3] = dats[0];
+            data[i][2] = dats[1];
+            data[i][1] = dats[2];
+            data[i][0] = dats[3];
 
         }
         table1.setModel(new DefaultTableModel(
                 data,
-                new String[]{"Nombre del pdf","Posicion de la palabra","Comparaciones"}
+                new String[]{"Nombre del pdf","Posicion de la palabra","Comparaciones arbol","Cmparaciones AVL"}
 
         ));
     }

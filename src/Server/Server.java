@@ -86,6 +86,7 @@ public class Server {
             i = i.replaceAll(",","");
             //System.out.println(i);
             arbol.addNodo(i, new String[]{String.valueOf(cont), archivo});
+            arbolAVL.addNodo(i,new String[]{String.valueOf(cont), archivo});
             cont+=1;
         }
         System.out.println("se creo el arbol");
@@ -99,7 +100,7 @@ public class Server {
     public static String buscar(String palabra){
         String mesage = "";
         boolean bandera = true;
-        Nodo current = arbol.getRaiz();
+        Nodo current = arbolAVL.getRaiz();
         int cont = 1;
         Nodo nuevo = new Nodo(palabra,new String[] {""});
         while (bandera){

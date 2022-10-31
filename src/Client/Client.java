@@ -67,18 +67,17 @@ public class Client extends javax.swing.JFrame{
             out.writeUTF(Palabra);
 
             message = in.readUTF();
-            if (message == "NoEncontro") {
+            if (message.equals("No encontrado")) {
                 JOptionPane.showMessageDialog(null,"No se encontraron resultados");
-
-            }else if (message != null && message != "NoEncontro") {
-                    Palabra = message;
-                    System.out.println(message);
-                    Busqueda.main(null);
-                    frame.setVisible(false);
-                } else {
-                    System.out.println(message);
-                    clientSocket.close();
-                }
+            }else if (message != null && message != "No encontrado") {
+                Palabra = message;
+                System.out.println(message);
+                Busqueda.main(null);
+                frame.setVisible(false);
+            } else {
+                System.out.println(message);
+                clientSocket.close();
+            }
 
             } catch(IOException e){
                 System.out.println(e);

@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Se agrega java doc a lo que se tiene." />
+    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Java doc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/BubbleSort.java" afterDir="false" />
+    </list>
     <list id="39453c1c-c286-43f9-a7fb-c63d5498e7fc" name="Changes by abarc" comment="" />
-    <list id="44ec49ec-768e-48d2-bbcc-23dc72680343" name="Changes by andre" comment="Changes by andre" />
+    <list id="44ec49ec-768e-48d2-bbcc-23dc72680343" name="Changes by andre" comment="Changes by andre">
+      <change beforePath="$PROJECT_DIR$/src/Client/Busqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Busqueda.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,7 +285,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667299618676</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Se agrega java doc a lo que se tiene.">
+      <created>1667299794962</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1667299794962</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Java doc">
+      <created>1667299851781</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667299851781</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,9 +328,10 @@
     <MESSAGE value="implementacion de .docx" />
     <MESSAGE value="Se implementa el Avl" />
     <MESSAGE value="Obtener parrafo" />
-    <MESSAGE value="Se agrega java doc a lo que se tiene." />
     <MESSAGE value="Changes by andre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by andre" />
+    <MESSAGE value="Se agrega java doc a lo que se tiene." />
+    <MESSAGE value="Java doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java doc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

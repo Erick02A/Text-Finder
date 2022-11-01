@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Obtener parrafo">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_10_2022_23_07__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_10_2022_18_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_10_2022_18_56__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_03_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_03_17__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_11_40__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_11_40__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_22_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_22_53__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_23_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_23_32__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Busqueda.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Busqueda.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Busqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Busqueda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-    </list>
+    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Se agrega java doc a lo que se tiene." />
     <list id="39453c1c-c286-43f9-a7fb-c63d5498e7fc" name="Changes by abarc" comment="" />
-    <list id="44ec49ec-768e-48d2-bbcc-23dc72680343" name="Changes by andre" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-    </list>
+    <list id="44ec49ec-768e-48d2-bbcc-23dc72680343" name="Changes by andre" comment="Changes by andre" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,16 +21,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Client/Client.java">
-      <ranges>
-        <range start1="87" end1="88" start2="87" end2="87" changelist="230247ec-4fc6-4181-b6ff-e671e1ba09b7" />
-        <range start1="127" end1="128" start2="126" end2="126" changelist="230247ec-4fc6-4181-b6ff-e671e1ba09b7" />
-        <range start1="137" end1="140" start2="135" end2="135" changelist="44ec49ec-768e-48d2-bbcc-23dc72680343" />
-        <range start1="180" end1="181" start2="175" end2="176" changelist="44ec49ec-768e-48d2-bbcc-23dc72680343" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -290,7 +266,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667284036408</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Se agrega java doc a lo que se tiene.">
+      <created>1667299609531</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1667299609531</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Changes by andre">
+      <created>1667299618676</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1667299618676</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,9 +308,10 @@
     <MESSAGE value="se muestra en pantalla los archivos donde se encuentran las busquedas" />
     <MESSAGE value="implementacion de .docx" />
     <MESSAGE value="Se implementa el Avl" />
-    <MESSAGE value="Se agrega java doc a lo que se tiene." />
     <MESSAGE value="Obtener parrafo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Obtener parrafo" />
+    <MESSAGE value="Se agrega java doc a lo que se tiene." />
+    <MESSAGE value="Changes by andre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by andre" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

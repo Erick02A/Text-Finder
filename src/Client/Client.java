@@ -85,7 +85,6 @@ public class Client extends javax.swing.JFrame{
             System.out.println(e);
         }
 
-
     }
 
     /**
@@ -125,7 +124,6 @@ public class Client extends javax.swing.JFrame{
                             Palabra = json;
                             System.out.println(Palabra);
                             sockets();
-
                         } catch (IOException e1) {
                             e1.getStackTrace();
                         }

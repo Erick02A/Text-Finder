@@ -24,6 +24,9 @@ public class Busqueda extends javax.swing.JFrame {
     private JButton ButtonVolver;
     private JScrollPane Tabla;
     private JButton Abrir;
+    private JButton fecha;
+    private JButton nombre;
+    private JButton tamaño;
     private static String Dato;
     private static JFrame frame;
 
@@ -84,6 +87,32 @@ public class Busqueda extends javax.swing.JFrame {
                 }
             }
         });
+        tamaño.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                OrdenamientoRADIX radix;
+            }
+        });
+        fecha.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String[] datos = Dato.split("¬");
+                datos = BubbleSort.bubbleSort(datos);
+                Dato="";
+                for (String b:datos){
+                    Dato += b+"¬";
+                }
+                createTable();
+
+
+            }
+        });
+        nombre.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                StringQuickSort Quick;
+            }
+        });
     }
 
     /**
@@ -113,91 +142,136 @@ public class Busqueda extends javax.swing.JFrame {
         String NewDato = "";
 
         for (int i = 0; i < text.split("¬").length; i++) {
-                String[] dats = finds[i].split(",");
-                url = dats[4];
-                name = dats[3];
-                String mesage = "";
-                String Palabra = "";
-                pos = Integer.parseInt(dats[2]);
-                int inicio = pos - 10;
-                int fin = pos + 10;
-                int cont = 0;
+            String[] dats = finds[i].split(",");
+            url = dats[4];
+            name = dats[3];
+            String mesage = "";
+            String Palabra = "";
+            pos = Integer.parseInt(dats[2]);
+            int inicio = pos - 10;
+            int fin = pos + 10;
+            int cont = 0;
 
-                if (name.contains(".txt")) {
-                    try (FileReader fr = new FileReader(url)) {
-                        String cadena = "";
-                        int valor = fr.read();
-                        while (valor != -1) {
-                            cadena = cadena + (char) valor;
-                            valor = fr.read();
-                        }
-
-                        String[] palabras = cadena.split(" ");
-                        while (cont < fin) {
-                            System.out.println(palabras.length);
-                            mesage += palabras[cont] + " ";
-                            System.out.println(cont);
-                            cont+=1;
-                        }
-                        NewDato += ","+finds[i]+","+mesage+"¬";
+            if (name.contains(".txt")) {
 
 
-                    } catch (IOException e1) {
-                        e1.getStackTrace();
+                try (FileReader fr = new FileReader(url)) {
+
+                    BasicFileAttributes attrs = Files.readAttributes(Path.of(url), BasicFileAttributes.class);
+                    FileTime time = attrs.creationTime();
+                    System.out.println(time);
+
+                    String cadena = "";
+                    int valor = fr.read();
+                    while (valor != -1) {
+                        cadena = cadena + (char) valor;
+                        valor = fr.read();
                     }
 
-                } else if (name.contains(".pdf")) {
-                    try {
-
-                        FileInputStream fis = new FileInputStream(url);
-
-                        BasicFileAttributes attrs = Files.readAttributes(Path.of(url), BasicFileAttributes.class);
-                        FileTime time = attrs.creationTime();
-                        System.out.println(time);
-
-                        PDDocument pdfDocument = PDDocument.load(fis);
-                        //System.out.println(pdfDocument.getPages().getCount());
-                        PDFTextStripper pdfTextStripper = new PDFTextStripper();
-
-
-                        String[] palabras = pdfTextStripper.getText(pdfDocument).replaceAll("\r\n", " ").split(" ");
-                        while (cont < fin) {
-                            System.out.println(palabras.length);
-                            mesage += palabras[cont] + " ";
-                            System.out.println(cont);
-                            cont+=1;
-                        }
-                        NewDato += ","+finds[i]+","+mesage+"¬";
-
-                        pdfDocument.close();
-                        fis.close();
-                    } catch (IOException ex) {
-                        throw new RuntimeException(ex);
+                    String[] palabras = cadena.split(" ");
+                    if (fin > palabras.length - 1) {
+                        fin = palabras.length - 1;
                     }
-
-                } else if (name.contains(".docx")) {
-                    try (XWPFDocument doc = new XWPFDocument(Files.newInputStream(Path.of(url)))) {
-                        XWPFWordExtractor xwpfWordExtractor = new XWPFWordExtractor(doc);
-                        String docText = xwpfWordExtractor.getText();
-                        Palabra = docText.replaceAll("\n", " ");
-
-
-                        String[] palabras = Palabra.split(" ");
-                        while (cont < fin) {
+                    while (cont < fin) {
+                        if (cont >= inicio) {
+                            if(cont==pos-1){
+                                System.out.println(palabras.length);
+                                mesage += "["+palabras[cont]+"]"+ " ";
+                                System.out.println(cont);
+                            }else {
                                 System.out.println(palabras.length);
                                 mesage += palabras[cont] + " ";
                                 System.out.println(cont);
-                                cont+=1;
-                                }
-
-                        NewDato += finds[i]+","+mesage+"¬";
-
-
-                    } catch (IOException ex) {
-                        throw new RuntimeException(ex);
+                            }
+                        }
+                        cont+=1;
                     }
+                    String[] a = String.valueOf(time).replaceAll("-","").split("T");
+                    NewDato +=finds[i]+","+mesage.replaceAll(",", "")+","+String.valueOf(palabras.length)+","+a[0]+"¬";
+
+
+                } catch (IOException e1) {
+                    e1.getStackTrace();
+                }
+
+            } else if (name.contains(".pdf")) {
+                try {
+
+                    FileInputStream fis = new FileInputStream(url);
+
+                    BasicFileAttributes attrs = Files.readAttributes(Path.of(url), BasicFileAttributes.class);
+                    FileTime time = attrs.creationTime();
+                    System.out.println(time);
+
+                    PDDocument pdfDocument = PDDocument.load(fis);
+                    //System.out.println(pdfDocument.getPages().getCount());
+                    PDFTextStripper pdfTextStripper = new PDFTextStripper();
+
+
+                    String[] palabras = pdfTextStripper.getText(pdfDocument).replaceAll("\r\n", " ").split(" ");
+                    if(fin>palabras.length-1){
+                        fin=palabras.length-1;
+                    }
+                    while (cont < fin) {
+                        if (cont >= inicio) {
+                            if(cont==pos-1){
+                                System.out.println(palabras.length);
+                                mesage += "["+palabras[cont]+"]"+ " ";
+                                System.out.println(cont);
+                            }else {
+                                System.out.println(palabras.length);
+                                mesage += palabras[cont] + " ";
+                                System.out.println(cont);
+                            }
+                        }
+                        cont+=1;
+                    }
+                    String[] a = String.valueOf(time).replaceAll("-","").split("T");
+                    NewDato +=finds[i]+","+mesage.replaceAll(",", "")+","+String.valueOf(palabras.length)+","+a[0]+"¬";
+
+                    pdfDocument.close();
+                    fis.close();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+
+            } else if (name.contains(".docx")) {
+                try (XWPFDocument doc = new XWPFDocument(Files.newInputStream(Path.of(url)))) {
+                    XWPFWordExtractor xwpfWordExtractor = new XWPFWordExtractor(doc);
+                    String docText = xwpfWordExtractor.getText();
+                    Palabra = docText.replaceAll("\n", " ");
+
+                    BasicFileAttributes attrs = Files.readAttributes(Path.of(url), BasicFileAttributes.class);
+                    FileTime time = attrs.creationTime();
+                    System.out.println(time);
+
+
+                    String[] palabras = Palabra.split(" ");
+                    if(fin>palabras.length-1){
+                        fin=palabras.length-1;
+                    }
+                    while (cont < fin) {
+                        if (cont >= inicio) {
+                            if(cont==pos-1){
+                                System.out.println(palabras.length);
+                                mesage += "["+palabras[cont]+"]"+ " ";
+                                System.out.println(cont);
+                            }else {
+                                System.out.println(palabras.length);
+                                mesage += palabras[cont] + " ";
+                                System.out.println(cont);
+                            }
+                        }
+                        cont+=1;
+                    }
+                    String[] a = String.valueOf(time).replaceAll("-","").split("T");
+                    NewDato +=finds[i]+","+mesage.replaceAll(",", "")+","+String.valueOf(palabras.length)+","+a[0]+"¬";
+
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
                 }
             }
+        }
 
         return NewDato;
     }

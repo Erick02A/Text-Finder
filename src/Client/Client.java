@@ -133,9 +133,6 @@ public class Client extends javax.swing.JFrame{
                             Bibliotecas.addItem(fichero.getName());
                             FileInputStream fis = new FileInputStream(fichero);
 
-                            BasicFileAttributes attrs = Files.readAttributes(fichero.toPath(), BasicFileAttributes.class);
-                            FileTime time = attrs.creationTime();
-                            System.out.println(time);
 
                             PDDocument pdfDocument = PDDocument.load(fis);
                             //System.out.println(pdfDocument.getPages().getCount());
@@ -176,7 +173,7 @@ public class Client extends javax.swing.JFrame{
                 }
 
             }
-        });
+        });//meperdonas?
 
         eliminarButton.addActionListener(new ActionListener() {
             @Override

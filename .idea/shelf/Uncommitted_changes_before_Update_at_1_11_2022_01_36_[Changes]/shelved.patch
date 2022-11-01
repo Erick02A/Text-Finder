@@ -1,0 +1,295 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_24_10_2022_23_07__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_24_10_2022_23_07__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_24_10_2022_23_07__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_24_10_2022_23_07__Changes_.xml	(revision 13fc2057cf6a1f4339f685142f6caeb2aa89e42c)
++++ /dev/null	(revision 13fc2057cf6a1f4339f685142f6caeb2aa89e42c)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_24_10_2022_23_07_[Changes]" date="1666674438843" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_10_2022_23_07_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 24/10/2022 23:07 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"230247ec-4fc6-4181-b6ff-e671e1ba09b7\" name=\"Changes\" comment=\"Funciones de los algoritmos de ordenamiento\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_13_28__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_13_28__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Client/BubbleSort.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Client/BubbleSort.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Client/Busqueda.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Client/Busqueda.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Client/StringQuickSort.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Client/StringQuickSort.java\" afterDir=\"false\" />\r\n    </list>\r\n    <list id=\"39453c1c-c286-43f9-a7fb-c63d5498e7fc\" name=\"Changes by abarc\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2G3liEzK7gsFwxkLcie4AA2ntYM\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Downloaded.Files.Path.Enabled\": \"false\",\r\n    \"Repository.Attach.Annotations\": \"false\",\r\n    \"Repository.Attach.JavaDocs\": \"false\",\r\n    \"Repository.Attach.Sources\": \"false\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW\": \"false\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"reference.settings.ide.settings.uml\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Busqueda\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Client.Busqueda\" />\r\n      <module name=\"Text Finder\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Client.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Client\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Client.Client\" />\r\n      <module name=\"Text Finder\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Client.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Server\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Server.Server\" />\r\n      <module name=\"Text Finder\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Server.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Busqueda\" />\r\n        <item itemvalue=\"Application.Client\" />\r\n        <item itemvalue=\"Application.Server\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"230247ec-4fc6-4181-b6ff-e671e1ba09b7\" name=\"Changes\" comment=\"Boton de eliminar bibliotecas\" />\r\n      <created>1665625277784</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1665625277784</updated>\r\n      <workItem from=\"1665625280427\" duration=\"2504000\" />\r\n      <workItem from=\"1665703301665\" duration=\"4338000\" />\r\n      <workItem from=\"1665709413713\" duration=\"2555000\" />\r\n      <workItem from=\"1666481295642\" duration=\"6844000\" />\r\n      <workItem from=\"1666542328364\" duration=\"4252000\" />\r\n      <workItem from=\"1666568207256\" duration=\"2949000\" />\r\n      <workItem from=\"1666629407644\" duration=\"9019000\" />\r\n      <workItem from=\"1666753311825\" duration=\"5822000\" />\r\n      <workItem from=\"1666822747592\" duration=\"7795000\" />\r\n      <workItem from=\"1666838824385\" duration=\"3687000\" />\r\n      <workItem from=\"1666629407644\" duration=\"6652000\" />\r\n      <workItem from=\"1666935585614\" duration=\"1804000\" />\r\n      <workItem from=\"1667076485722\" duration=\"5211000\" />\r\n      <workItem from=\"1667082850513\" duration=\"3668000\" />\r\n      <workItem from=\"1667192999059\" duration=\"2548000\" />\r\n      <workItem from=\"1667202919695\" duration=\"3548000\" />\r\n      <workItem from=\"1667234262850\" duration=\"3615000\" />\r\n      <workItem from=\"1667264808352\" duration=\"4196000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se crean los mains de ambas apps\">\r\n      <created>1665626178301</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665626178301</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Se crean los mains de ambas apps\">\r\n      <created>1665627690203</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665627690203</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <created>1665707349042</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665707349042</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <created>1665707365289</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665707365289</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Se crea la calse del arbol&#10; y los nodo de estos\">\r\n      <created>1665709470372</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665709470372</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Se prueban las busquedas en el arbol de busqueda\">\r\n      <created>1666497314180</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666497314180</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Se dan detalles a los AVL\">\r\n      <created>1666589778192</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666589778193</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Se dan detalles a los AVL\">\r\n      <created>1666655722375</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666655722375</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Creacion de la ventana donde apareceran las busquedas\">\r\n      <created>1666916075840</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666916075840</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Json a los PDF\">\r\n      <created>1666929081033</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666929081033</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"uis\">\r\n      <created>1667006563974</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667006563974</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"implementacion de .docx\">\r\n      <created>1667015312284</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667015312284</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"implementacion de .docx\">\r\n      <created>1667082420382</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667082420382</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"se muestra en pantalla los archivos donde se encuentran las busquedas\">\r\n      <created>1667086095786</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667086095786</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"implementacion de .docx\">\r\n      <created>1667172786789</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667172786789</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Se implementa el Avl\">\r\n      <created>1667205887482</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667205887482</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"Se agrega java doc a lo que se tiene.\">\r\n      <created>1667273834772</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667273834772</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"18\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se crean los mains de ambas apps\" />\r\n    <MESSAGE value=\"Se crea la calse del arbol&#10; y los nodo de estos\" />\r\n    <MESSAGE value=\"Se prueban las busquedas en el arbol de busqueda\" />\r\n    <MESSAGE value=\"Se dan detalles a los AVL\" />\r\n    <MESSAGE value=\"Creacion de la ventana donde apareceran las busquedas\" />\r\n    <MESSAGE value=\"Json a los PDF\" />\r\n    <MESSAGE value=\"uis\" />\r\n    <MESSAGE value=\"se muestra en pantalla los archivos donde se encuentran las busquedas\" />\r\n    <MESSAGE value=\"implementacion de .docx\" />\r\n    <MESSAGE value=\"Se implementa el Avl\" />\r\n    <MESSAGE value=\"Se agrega java doc a lo que se tiene.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se agrega java doc a lo que se tiene.\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 13fc2057cf6a1f4339f685142f6caeb2aa89e42c)
++++ b/.idea/workspace.xml	(date 1667284528374)
+@@ -4,12 +4,16 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Funciones de los algoritmos de ordenamiento">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_13_28__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_13_28__Changes_.xml" afterDir="false" />
++    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Se agrega java doc a lo que se tiene.">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_10_2022_23_07__Changes_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_10_2022_18_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_10_2022_18_56__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_03_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_03_17__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_11_40__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_11_40__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_22_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_22_53__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_23_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_10_2022_23_32__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Client/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/BubbleSort.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Client/Busqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Busqueda.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Client/StringQuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/StringQuickSort.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+     </list>
+     <list id="39453c1c-c286-43f9-a7fb-c63d5498e7fc" name="Changes by abarc" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+@@ -36,26 +40,25 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Downloaded.Files.Path.Enabled": "false",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "false",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "false",
+-    "WebServerToolWindowFactoryState": "false",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Libraries",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager">
+     <configuration name="Busqueda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Client.Busqueda" />
+Index: src/Client/Busqueda.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Client;\r\n\r\nimport org.apache.pdfbox.pdmodel.PDDocument;\r\nimport org.apache.pdfbox.text.PDFTextStripper;\r\nimport org.apache.poi.xwpf.extractor.XWPFWordExtractor;\r\nimport org.apache.poi.xwpf.usermodel.XWPFDocument;\r\n\r\nimport javax.swing.*;\r\nimport javax.swing.table.DefaultTableModel;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\nimport java.io.*;\r\nimport java.nio.file.Files;\r\nimport java.nio.file.Path;\r\nimport java.nio.file.attribute.BasicFileAttributes;\r\nimport java.nio.file.attribute.FileTime;\r\n\r\n/**\r\n * Clase que se encarga de crear la ventana y las partes donde se muestran los resultados de la busueda.\r\n */\r\npublic class Busqueda extends javax.swing.JFrame {\r\n    private JPanel Panel2;\r\n    private JTable table1;\r\n    private JButton ButtonVolver;\r\n    private JScrollPane Tabla;\r\n    private JButton Abrir;\r\n    private static String Dato;\r\n    private static JFrame frame;\r\n\r\n    public static void main(String[] args) {\r\n        try {\r\n            frame = new Busqueda(\"Text Finder\", Client.getPalabra());\r\n        } catch (FileNotFoundException e) {\r\n            throw new RuntimeException(e);\r\n        }\r\n        frame.setVisible(true);\r\n    }\r\n\r\n    /**\r\n     * Metodo que se encarga de inicialkizar el Jframe\r\n     *\r\n     * @param title titulo de la ventana\r\n     * @param Datos daos a mostrar\r\n     */\r\n    public Busqueda(String title, String Datos) throws FileNotFoundException {\r\n        super(title);\r\n        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);\r\n        this.setContentPane(Panel2);\r\n        this.pack();\r\n        Dato = GetDato(Datos,0);\r\n        System.out.println(\"Prueba: \" + Dato);\r\n        createTable();\r\n        //table1.addColumn(\"Nombre del archivo\");\r\n        ButtonVolver.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                //new Client(\"Text Finder\");\r\n                frame.dispose();\r\n                frame.remove(frame);\r\n                Client.main(null);\r\n            }\r\n        });\r\n        Abrir.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                String[] finds = Dato.split(\"¬\");\r\n                String url = \"\";\r\n                int i = 0;\r\n                boolean f = true;\r\n                while (f) {\r\n                    if (i == (table1.getSelectedRow())) {\r\n                        String[] dats = finds[i].split(\",\");\r\n                        url = dats[4];\r\n                        f = false;\r\n                    }\r\n                    i++;\r\n                }\r\n                ProcessBuilder p = new ProcessBuilder();\r\n                p.command(\"cmd.exe\", \"/c\", url);\r\n                try {\r\n                    p.start();\r\n                } catch (IOException ex) {\r\n                    throw new RuntimeException(ex);\r\n                }\r\n            }\r\n        });\r\n    }\r\n\r\n    /**\r\n     * Metodo que rellena el Jtable con los datos.\r\n     */\r\n    public void createTable() {\r\n        String[] finds = Dato.split(\"¬\");\r\n        Object[][] data = new Object[finds.length][4];\r\n        for (int i = 0; i < finds.length; i++) {\r\n            String[] dats = finds[i].split(\",\");\r\n            data[i][3] = dats[0];\r\n            data[i][2] = dats[1];\r\n            data[i][1] = dats[2];\r\n            data[i][0] = dats[3];\r\n        }\r\n        table1.setModel(new DefaultTableModel(\r\n                data,\r\n                new String[]{\"Archivo\", \"Posicion\", \"arbolBin\", \"arbolAVL\"}\r\n        ));\r\n    }\r\n\r\n    public String GetDato(String text, int pos) throws FileNotFoundException {\r\n        String[] finds = text.split(\"¬\");\r\n        String url = \"\";\r\n        String name = \"\";\r\n        String newDato;\r\n\r\n        String Palabra = \"\";\r\n        for (int i = 0; i < text.split(\"¬\").length; i++) {\r\n                String[] dats = finds[i].split(\",\");\r\n                url = dats[4];\r\n                name = dats[3];\r\n                String mesage = \"\";\r\n                pos = Integer.parseInt(dats[2]);\r\n                int inicio = pos - 10;\r\n                int fin = pos + 10;\r\n                int cont = 0;\r\n\r\n                if (name.contains(\".txt\")) {\r\n                    try (FileReader fr = new FileReader(url)) {\r\n                        String cadena = \"\";\r\n                        int valor = fr.read();\r\n                        while (valor != -1) {\r\n                            cadena = cadena + (char) valor;\r\n                            valor = fr.read();\r\n                        }\r\n\r\n                        String[] palabras = cadena.split(\" \");\r\n                        while ((cont > inicio) && (cont < fin)) {\r\n                            if (cont == pos) {\r\n                                mesage += palabras[cont] + \" \";\r\n                                System.out.println(\"q\");\r\n                            } else {\r\n                                mesage += palabras[cont] + \" \";\r\n                                System.out.println(\"q\");\r\n                            }\r\n                        }\r\n                        Palabra += finds[i]+\",\"+mesage+\"¬\";\r\n\r\n\r\n                    } catch (IOException e1) {\r\n                        e1.getStackTrace();\r\n                    }\r\n\r\n                } else if (name.contains(\".pdf\")) {\r\n                    try {\r\n\r\n                        FileInputStream fis = new FileInputStream(url);\r\n\r\n                        BasicFileAttributes attrs = Files.readAttributes(Path.of(url), BasicFileAttributes.class);\r\n                        FileTime time = attrs.creationTime();\r\n                        System.out.println(time);\r\n\r\n                        PDDocument pdfDocument = PDDocument.load(fis);\r\n                        //System.out.println(pdfDocument.getPages().getCount());\r\n                        PDFTextStripper pdfTextStripper = new PDFTextStripper();\r\n\r\n\r\n                        String[] palabras = pdfTextStripper.getText(pdfDocument).replaceAll(\"\\r\\n\", \" \").split(\" \");\r\n                        while ((cont > inicio) && (cont < fin)) {\r\n                            if (cont == pos) {\r\n                                mesage += palabras[cont] + \" \";\r\n                            } else {\r\n                                mesage += palabras[cont] + \" \";\r\n                            }\r\n                        }\r\n                        Palabra += finds[i]+\",\"+mesage+\"¬\";\r\n\r\n                        pdfDocument.close();\r\n                        fis.close();\r\n                    } catch (IOException ex) {\r\n                        throw new RuntimeException(ex);\r\n                    }\r\n\r\n                } else if (name.contains(\".docx\")) {\r\n                    try (XWPFDocument doc = new XWPFDocument(Files.newInputStream(Path.of(url)))) {\r\n                        XWPFWordExtractor xwpfWordExtractor = new XWPFWordExtractor(doc);\r\n                        String docText = xwpfWordExtractor.getText();\r\n                        Palabra = docText.replaceAll(\"\\n\", \" \");\r\n\r\n\r\n                        String[] palabras = Palabra.split(\" \");\r\n                        while ((cont > inicio) && (cont < fin)) {\r\n                            if (cont == pos) {\r\n                                mesage += palabras[cont] + \" \";\r\n                            } else {\r\n                                mesage += palabras[cont] + \" \";\r\n                            }\r\n                        }\r\n                        Palabra += finds[i]+\",\"+mesage+\"¬\";\r\n\r\n\r\n                    } catch (IOException ex) {\r\n                        throw new RuntimeException(ex);\r\n                    }\r\n                }\r\n            }\r\n\r\n        return Palabra;\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Client/Busqueda.java b/src/Client/Busqueda.java
+--- a/src/Client/Busqueda.java	(revision 13fc2057cf6a1f4339f685142f6caeb2aa89e42c)
++++ b/src/Client/Busqueda.java	(date 1667288126277)
+@@ -38,7 +38,6 @@
+ 
+     /**
+      * Metodo que se encarga de inicialkizar el Jframe
+-     *
+      * @param title titulo de la ventana
+      * @param Datos daos a mostrar
+      */
+@@ -113,96 +112,107 @@
+ 
+         String Palabra = "";
+         for (int i = 0; i < text.split("¬").length; i++) {
+-                String[] dats = finds[i].split(",");
+-                url = dats[4];
+-                name = dats[3];
+-                String mesage = "";
+-                pos = Integer.parseInt(dats[2]);
+-                int inicio = pos - 10;
+-                int fin = pos + 10;
+-                int cont = 0;
++            String[] dats = finds[i].split(",");
++            url = dats[4];
++            name = dats[3];
++            String mesage = "";
++            pos = Integer.parseInt(dats[2]);
++            int inicio = pos - 10;
++            int fin = pos + 10;
++            int cont = 0;
+ 
+-                if (name.contains(".txt")) {
+-                    try (FileReader fr = new FileReader(url)) {
+-                        String cadena = "";
+-                        int valor = fr.read();
+-                        while (valor != -1) {
+-                            cadena = cadena + (char) valor;
+-                            valor = fr.read();
+-                        }
++            if (name.contains(".txt")) {
++                try (FileReader fr = new FileReader(url)) {
++                    String cadena = "";
++                    int valor = fr.read();
++                    while (valor != -1) {
++                        cadena = cadena + (char) valor;
++                        valor = fr.read();
++                    }
+ 
+-                        String[] palabras = cadena.split(" ");
+-                        while ((cont > inicio) && (cont < fin)) {
++                    String[] palabras = cadena.split(" ");
++                    while ((cont > inicio) && (cont < fin)) {
++                        if(cont>palabras.length){
++                            cont=fin+1;
++                        }else{
+                             if (cont == pos) {
+                                 mesage += palabras[cont] + " ";
+-                                System.out.println("q");
+                             } else {
+                                 mesage += palabras[cont] + " ";
+-                                System.out.println("q");
+                             }
+                         }
+-                        Palabra += finds[i]+","+mesage+"¬";
++                        cont++;
++                    }
++                    Palabra += finds[i]+","+mesage+"¬";
+ 
+ 
+-                    } catch (IOException e1) {
+-                        e1.getStackTrace();
+-                    }
++                } catch (IOException e1) {
++                    e1.getStackTrace();
++                }
+ 
+-                } else if (name.contains(".pdf")) {
+-                    try {
++            } else if (name.contains(".pdf")) {
++                try {
+ 
+-                        FileInputStream fis = new FileInputStream(url);
++                    FileInputStream fis = new FileInputStream(url);
+ 
+-                        BasicFileAttributes attrs = Files.readAttributes(Path.of(url), BasicFileAttributes.class);
+-                        FileTime time = attrs.creationTime();
+-                        System.out.println(time);
++                    BasicFileAttributes attrs = Files.readAttributes(Path.of(url), BasicFileAttributes.class);
++                    FileTime time = attrs.creationTime();
++                    System.out.println(time);
+ 
+-                        PDDocument pdfDocument = PDDocument.load(fis);
+-                        //System.out.println(pdfDocument.getPages().getCount());
+-                        PDFTextStripper pdfTextStripper = new PDFTextStripper();
++                    PDDocument pdfDocument = PDDocument.load(fis);
++                    //System.out.println(pdfDocument.getPages().getCount());
++                    PDFTextStripper pdfTextStripper = new PDFTextStripper();
+ 
+ 
+-                        String[] palabras = pdfTextStripper.getText(pdfDocument).replaceAll("\r\n", " ").split(" ");
+-                        while ((cont > inicio) && (cont < fin)) {
++                    String[] palabras = pdfTextStripper.getText(pdfDocument).replaceAll("\r\n", " ").split(" ");
++                    while ((cont > inicio) && (cont < fin)) {
++                        if(cont>){
++                            cont=fin+1;
++                        }else {
+                             if (cont == pos) {
+                                 mesage += palabras[cont] + " ";
+                             } else {
+                                 mesage += palabras[cont] + " ";
+                             }
+                         }
+-                        Palabra += finds[i]+","+mesage+"¬";
++                    }
++                    Palabra += finds[i]+","+mesage+"¬";
+ 
+-                        pdfDocument.close();
+-                        fis.close();
+-                    } catch (IOException ex) {
+-                        throw new RuntimeException(ex);
+-                    }
++                    pdfDocument.close();
++                    fis.close();
++                } catch (IOException ex) {
++                    throw new RuntimeException(ex);
++                }
+ 
+-                } else if (name.contains(".docx")) {
+-                    try (XWPFDocument doc = new XWPFDocument(Files.newInputStream(Path.of(url)))) {
+-                        XWPFWordExtractor xwpfWordExtractor = new XWPFWordExtractor(doc);
+-                        String docText = xwpfWordExtractor.getText();
+-                        Palabra = docText.replaceAll("\n", " ");
++            } else if (name.contains(".docx")) {
++                try (XWPFDocument doc = new XWPFDocument(Files.newInputStream(Path.of(url)))) {
++                    XWPFWordExtractor xwpfWordExtractor = new XWPFWordExtractor(doc);
++                    String docText = xwpfWordExtractor.getText();
++                    Palabra = docText.replaceAll("\n", " ");
+ 
+ 
+-                        String[] palabras = Palabra.split(" ");
+-                        while ((cont > inicio) && (cont < fin)) {
++                    String[] palabras = Palabra.split(" ");
++                    while ((cont > inicio) && (cont < fin)) {
++                        if(cont>palabras.length){
++                            cont=fin+1;
++                        }else {
+                             if (cont == pos) {
+                                 mesage += palabras[cont] + " ";
+                             } else {
+                                 mesage += palabras[cont] + " ";
+                             }
+                         }
+-                        Palabra += finds[i]+","+mesage+"¬";
++                        cont++;
++                    }
++                    Palabra += finds[i]+","+mesage+"¬";
+ 
+ 
+-                    } catch (IOException ex) {
+-                        throw new RuntimeException(ex);
+-                    }
+-                }
+-            }
++                } catch (IOException ex) {
++                    throw new RuntimeException(ex);
++                }
++            }
++        }
+ 
+         return Palabra;
+     }
+ }
+-
+Index: src/Client/Client.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Client;\r\n\r\nimport com.google.gson.Gson;\r\n\r\nimport javax.swing.*;\r\nimport javax.swing.filechooser.FileNameExtensionFilter;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\nimport java.io.*;\r\nimport java.net.Socket;\r\nimport java.nio.file.attribute.BasicFileAttributes;\r\nimport java.nio.file.attribute.FileTime;\r\nimport java.util.List;\r\n\r\nimport org.apache.pdfbox.pdmodel.PDDocument;\r\nimport org.apache.pdfbox.text.PDFTextStripper;\r\nimport org.apache.poi.xwpf.usermodel.XWPFDocument;\r\nimport org.apache.poi.xwpf.extractor.XWPFWordExtractor;\r\nimport org.apache.poi.xwpf.usermodel.XWPFParagraph;\r\nimport java.nio.file.Files;\r\nimport java.nio.file.Paths;\r\n\r\n//import org.apache.poi.xwpf.usermodel.*;\r\n\r\n/**\r\n * clase que se encarga de inicar y contener al cliente\r\n */\r\npublic class Client extends javax.swing.JFrame{\r\n    private JButton eliminarButton;\r\n    private JButton agregarButton;\r\n    private JTextField textField1;\r\n    private JButton buscarButton;\r\n    private JComboBox Bibliotecas;\r\n    private JPanel MainPanel;\r\n    private JTextField textField;\r\n    private static String Palabra = \"Probando\";\r\n\r\n    final String HOST = \"127.0.0.1\";\r\n    final int PORT = 5000;\r\n    DataOutputStream out;\r\n    DataInputStream in;\r\n\r\n    public static String getPalabra() {\r\n        return Palabra;\r\n    }\r\n\r\n    static JFrame frame = new Client(\"Text Finder\");\r\n\r\n\r\n    /**\r\n     * Main del cliente para iniciar el mismo\r\n     * @param args\r\n     */\r\n    public static void main(String[] args) {\r\n        frame.setVisible(true);\r\n    }\r\n    /**\r\n     * Metodo que se encarga de abrir el socket y enviar  un mensaje al servidor\r\n     *\r\n     */\r\n    private void sockets(){\r\n        try {\r\n            String message = null;\r\n            Socket clientSocket = new Socket(HOST, PORT);\r\n\r\n            in = new DataInputStream(clientSocket.getInputStream());\r\n            out = new DataOutputStream(clientSocket.getOutputStream());\r\n\r\n            out.writeUTF(Palabra);\r\n\r\n            message = in.readUTF();\r\n            if (message.equals(\"No encontrado\")) {\r\n                JOptionPane.showMessageDialog(null,\"No se encontraron resultados\");\r\n            }else if (message != null && message != \"No encontrado\") {\r\n                Palabra = message;\r\n                System.out.println(message);\r\n                Busqueda.main(null);\r\n                frame.setVisible(false);\r\n            } else {\r\n                System.out.println(message);\r\n                clientSocket.close();\r\n            }\r\n\r\n        } catch(IOException e){\r\n            System.out.println(e);\r\n        }\r\n\r\n\r\n    }\r\n\r\n    /**\r\n     * Metodo que inicializa el Jframe del cliente.\r\n     * @param title titulo de la ventana.\r\n     */\r\n    public Client(String title){\r\n        super (title);\r\n\r\n        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);\r\n        this.setContentPane(MainPanel);\r\n        this.pack();\r\n\r\n\r\n        agregarButton.addActionListener(new ActionListener() {\r\n            public void actionPerformed(ActionEvent e) {\r\n                JFileChooser fc = new JFileChooser();\r\n\r\n                FileNameExtensionFilter filtro = new FileNameExtensionFilter(\"*.TXT *.PDF *.DOCX\" ,\"txt\",\"pdf\",\"docx\");\r\n                fc.setFileFilter(filtro);\r\n                int selection = fc.showOpenDialog(fc);\r\n                if(selection == JFileChooser.APPROVE_OPTION) {\r\n                    File fichero = fc.getSelectedFile();\r\n                    if (fichero.getName().contains(\".txt\")) {\r\n                        try (FileReader fr = new FileReader(fichero)){\r\n                            String cadena = \"\";\r\n                            int valor = fr.read();\r\n                            while(valor != -1){\r\n                                cadena = cadena + (char) valor;\r\n                                valor = fr.read();\r\n                            }\r\n                            //textArea.setText(cadena);\r\n                            Bibliotecas.addItem(fichero.getName());\r\n                            Archivo a = new Archivo(fichero.getName()+\",\"+fichero,cadena);\r\n                            Gson g = new Gson();\r\n                            String json = g.toJson(a);\r\n                            Palabra = json;\r\n                            System.out.println(Palabra);\r\n                            sockets();\r\n\r\n                        } catch (IOException e1) {\r\n                            e1.getStackTrace();\r\n                        }\r\n\r\n                    }else if (fichero.getName().contains(\".pdf\")){\r\n                        try {\r\n                            Bibliotecas.addItem(fichero.getName());\r\n                            FileInputStream fis = new FileInputStream(fichero);\r\n\r\n                            BasicFileAttributes attrs = Files.readAttributes(fichero.toPath(), BasicFileAttributes.class);\r\n                            FileTime time = attrs.creationTime();\r\n                            System.out.println(time);\r\n\r\n                            PDDocument pdfDocument = PDDocument.load(fis);\r\n                            //System.out.println(pdfDocument.getPages().getCount());\r\n                            PDFTextStripper pdfTextStripper = new PDFTextStripper();\r\n                            Archivo a = new Archivo(fichero.getName()+\",\"+fichero, pdfTextStripper.getText(pdfDocument).replaceAll(\"\\r\\n\",\" \"));\r\n                            Gson g = new Gson();\r\n                            String json = g.toJson(a);\r\n                            Palabra = json;\r\n                            System.out.println(Palabra);\r\n                            sockets();\r\n                            pdfDocument.close();\r\n                            fis.close();\r\n                        } catch (IOException ex) {\r\n                            throw new RuntimeException(ex);\r\n                        }\r\n\r\n                    }else if (fichero.getName().contains(\".docx\")){\r\n                        try (XWPFDocument doc = new XWPFDocument(\r\n                                Files.newInputStream(fichero.toPath()))){\r\n                            Bibliotecas.addItem(fichero.getName());\r\n                            XWPFWordExtractor xwpfWordExtractor = new XWPFWordExtractor(doc);\r\n                            String docText = xwpfWordExtractor.getText();\r\n                            Palabra = docText.replaceAll(\"\\n\",\" \");\r\n\r\n                            Archivo a = new Archivo(fichero.getName()+\",\"+fichero, Palabra);\r\n                            Gson g = new Gson();\r\n                            String json = g.toJson(a);\r\n                            Palabra = json;\r\n                            System.out.println(Palabra);\r\n                            sockets();\r\n\r\n                        }catch (IOException ex) {\r\n                            throw new RuntimeException(ex);\r\n                        }\r\n                    }else{\r\n                        System.out.println(\"en implementacion\");\r\n                    }\r\n                }\r\n\r\n            }\r\n        });\r\n\r\n        eliminarButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                if (Bibliotecas.getSelectedItem() != null) {\r\n                    //Palabra = \"eliminar\";\r\n                    //sockets();\r\n                    //System.out.println(Bibliotecas.getSelectedItem());\r\n                    //Palabra = (String) Bibliotecas.getSelectedItem();\r\n                    //sockets();\r\n                    Bibliotecas.removeItem(Bibliotecas.getSelectedItem());\r\n\r\n                }else{JOptionPane.showMessageDialog(null,\"Seleccione un archivo\");}\r\n            }\r\n        });\r\n        buscarButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n\r\n                if (textField1.getText().equals(\"\")) {\r\n                    JOptionPane.showMessageDialog(null,\"Inserte una palabra para buscar\");\r\n\r\n                }else {\r\n                    if(null == Bibliotecas.getSelectedItem()) {\r\n                        JOptionPane.showMessageDialog(null,\"Agrege archivos a la biblioteca\");\r\n                    }else{\r\n                        Palabra = \"buscar\";\r\n                        sockets();\r\n                        Palabra = textField1.getText();\r\n                        sockets();\r\n\r\n\r\n                    }\r\n                }\r\n            }\r\n        });\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Client/Client.java b/src/Client/Client.java
+--- a/src/Client/Client.java	(revision 13fc2057cf6a1f4339f685142f6caeb2aa89e42c)
++++ b/src/Client/Client.java	(date 1667284175579)
+@@ -85,7 +85,6 @@
+             System.out.println(e);
+         }
+ 
+-
+     }
+ 
+     /**
+@@ -125,7 +124,6 @@
+                             Palabra = json;
+                             System.out.println(Palabra);
+                             sockets();
+-
+                         } catch (IOException e1) {
+                             e1.getStackTrace();
+                         }

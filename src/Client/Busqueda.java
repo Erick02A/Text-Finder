@@ -91,17 +91,18 @@ public class Busqueda extends javax.swing.JFrame {
      */
     public void createTable() {
         String[] finds = Dato.split("¬");
-        Object[][] data = new Object[finds.length][4];
+        Object[][] data = new Object[finds.length][5];
         for (int i = 0; i < finds.length; i++) {
             String[] dats = finds[i].split(",");
-            data[i][3] = dats[0];
-            data[i][2] = dats[1];
-            data[i][1] = dats[2];
+            data[i][4] = dats[0];
+            data[i][3] = dats[1];
+            data[i][2] = dats[2];
+            data[i][1] = dats[5];
             data[i][0] = dats[3];
         }
         table1.setModel(new DefaultTableModel(
                 data,
-                new String[]{"Archivo", "Posicion", "arbolBin", "arbolAVL"}
+                new String[]{"Archivo","Texto", "Posicion", "arbolBin", "arbolAVL"}
         ));
     }
 
@@ -109,18 +110,18 @@ public class Busqueda extends javax.swing.JFrame {
         String[] finds = text.split("¬");
         String url = "";
         String name = "";
-        String newDato;
+        String NewDato = "";
 
-        String Palabra = "";
         for (int i = 0; i < text.split("¬").length; i++) {
                 String[] dats = finds[i].split(",");
                 url = dats[4];
                 name = dats[3];
                 String mesage = "";
+                String Palabra = "";
                 pos = Integer.parseInt(dats[2]);
                 int inicio = pos - 10;
                 int fin = pos + 10;
-                int cont = 0;
+                int cont = inicio;
 
                 if (name.contains(".txt")) {
                     try (FileReader fr = new FileReader(url)) {
@@ -132,16 +133,18 @@ public class Busqueda extends javax.swing.JFrame {
                         }
 
                         String[] palabras = cadena.split(" ");
-                        while ((cont > inicio) && (cont < fin)) {
-                            if (cont == pos) {
+                        while ((cont >= inicio) && (cont < fin)) {
+                            if(cont<0) {
+                                cont+=1;
+                            }else if(fin<palabras.length) {
+                                System.out.println(palabras.length);
                                 mesage += palabras[cont] + " ";
-                                System.out.println("q");
-                            } else {
-                                mesage += palabras[cont] + " ";
-                                System.out.println("q");
-                            }
+                                System.out.println(cont);
+                                cont+=1;
+                            }else{fin-=1;}
+
                         }
-                        Palabra += finds[i]+","+mesage+"¬";
+                        NewDato += ","+finds[i]+","+mesage+"¬";
 
 
                     } catch (IOException e1) {
@@ -163,14 +166,18 @@ public class Busqueda extends javax.swing.JFrame {
 
 
                         String[] palabras = pdfTextStripper.getText(pdfDocument).replaceAll("\r\n", " ").split(" ");
-                        while ((cont > inicio) && (cont < fin)) {
-                            if (cont == pos) {
+                        while ((cont >= inicio) && (cont < fin)) {
+                            if(cont<0) {
+                                cont+=1;
+                            }else if(fin<palabras.length) {
+                                System.out.println(palabras.length);
                                 mesage += palabras[cont] + " ";
-                            } else {
-                                mesage += palabras[cont] + " ";
-                            }
+                                System.out.println(cont);
+                                cont+=1;
+                            }else{fin-=1;}
+
                         }
-                        Palabra += finds[i]+","+mesage+"¬";
+                        NewDato += ","+finds[i]+","+mesage+"¬";
 
                         pdfDocument.close();
                         fis.close();
@@ -186,14 +193,18 @@ public class Busqueda extends javax.swing.JFrame {
 
 
                         String[] palabras = Palabra.split(" ");
-                        while ((cont > inicio) && (cont < fin)) {
-                            if (cont == pos) {
-                                mesage += palabras[cont] + " ";
-                            } else {
-                                mesage += palabras[cont] + " ";
-                            }
+                        while (cont < fin) {
+                            if(cont<0) {
+                                cont+=1;
+                            }else{
+                                System.out.println(palabras.length);
+                                    mesage += palabras[cont] + " ";
+                                    System.out.println(cont);
+                                    cont+=1;
+                                }
+
                         }
-                        Palabra += finds[i]+","+mesage+"¬";
+                        NewDato += ","+finds[i]+","+mesage+"¬";
 
 
                     } catch (IOException ex) {
@@ -202,7 +213,7 @@ public class Busqueda extends javax.swing.JFrame {
                 }
             }
 
-        return Palabra;
+        return NewDato;
     }
 }
 

@@ -52,7 +52,7 @@ public class Busqueda extends javax.swing.JFrame {
         this.pack();
         Dato = GetDato(Datos,0);
         System.out.println("Prueba: " + Dato);
-        createTable();
+        createTable(Dato);
         //table1.addColumn("Nombre del archivo");
         ButtonVolver.addActionListener(new ActionListener() {
             @Override
@@ -90,7 +90,8 @@ public class Busqueda extends javax.swing.JFrame {
         tamaño.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                OrdenamientoRADIX radix;
+                int arr[] = {170, 45, 75, 90, 802, 24, 2, 66};
+                OrdenamientoRADIX.radixsort(arr, 8);
             }
         });
         fecha.addActionListener(new ActionListener() {
@@ -102,7 +103,8 @@ public class Busqueda extends javax.swing.JFrame {
                 for (String b:datos){
                     Dato += b+"¬";
                 }
-                createTable();
+
+                createTable(Dato);
 
 
             }
@@ -118,8 +120,8 @@ public class Busqueda extends javax.swing.JFrame {
     /**
      * Metodo que rellena el Jtable con los datos.
      */
-    public void createTable() {
-        String[] finds = Dato.split("¬");
+    public void createTable(String dato) {
+        String[] finds = dato.split("¬");
         Object[][] data = new Object[finds.length][5];
         for (int i = 0; i < finds.length; i++) {
             String[] dats = finds[i].split(",");
@@ -129,6 +131,8 @@ public class Busqueda extends javax.swing.JFrame {
             data[i][1] = dats[5];
             data[i][0] = dats[3];
         }
+
+        table1.remove(table1);
         table1.setModel(new DefaultTableModel(
                 data,
                 new String[]{"Archivo","Texto", "Posicion", "arbolBin", "arbolAVL"}

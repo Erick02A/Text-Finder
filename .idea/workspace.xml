@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Se implementa el Avl">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_10_2022_17_55_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_10_2022_17_55__Changes_.xml" beforeDir="false" />
+    <list default="true" id="230247ec-4fc6-4181-b6ff-e671e1ba09b7" name="Changes" comment="Se agrega java doc a lo que se tiene.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Archivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Archivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Busqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Busqueda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/OrdenamientoRADIX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/OrdenamientoRADIX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/StringQuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/StringQuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/ArbolAVL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ArbolAVL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <list id="39453c1c-c286-43f9-a7fb-c63d5498e7fc" name="Changes by abarc" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +135,7 @@
       <workItem from="1667192999059" duration="2548000" />
       <workItem from="1667202919695" duration="3548000" />
       <workItem from="1667234262850" duration="3615000" />
-      <workItem from="1667264808352" duration="2756000" />
+      <workItem from="1667264808352" duration="4196000" />
     </task>
     <task id="LOCAL-00001" summary="Se crean los mains de ambas apps">
       <created>1665626178301</created>
@@ -259,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667205887482</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Se agrega java doc a lo que se tiene.">
+      <created>1667273834772</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667273834772</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +284,8 @@
     <MESSAGE value="se muestra en pantalla los archivos donde se encuentran las busquedas" />
     <MESSAGE value="implementacion de .docx" />
     <MESSAGE value="Se implementa el Avl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se implementa el Avl" />
+    <MESSAGE value="Se agrega java doc a lo que se tiene." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrega java doc a lo que se tiene." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

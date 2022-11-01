@@ -89,4 +89,19 @@ public class Busqueda extends javax.swing.JFrame{
                 new String[]{"Archivo","Posicion","arbolBin","arbolAVL"}
         ));
     }
+    public String creatext(String text, int pos){
+        String mesage = "";
+        int inicio = pos-10;
+        int fin = pos+10;
+        int cont = 0;
+        String[] palabras = text.split(" ");
+        while ((cont>inicio-1)&&(cont<fin+1)){
+            if (cont==pos){
+                mesage+=palabras[cont]+" ";
+            }else {
+                mesage+=palabras[cont]+" ";
+            }
+        }
+        return mesage;
+    }
 }

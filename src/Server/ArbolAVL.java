@@ -5,14 +5,32 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Clase que genera los arbolesAVL.
+ */
 public class ArbolAVL {
     private Nodo raiz;
+
+    /**
+     * Metodo que inicializa el arbol
+     */
     public ArbolAVL(){
         this.raiz = null;
     }
+
+    /**
+     * Metodo para obtener la raiz del arbol.
+     * @return Nodo del arbol
+     */
     public Nodo getRaiz(){
         return raiz;
     }
+
+    /**
+     * Obtiene la altura del nodo.
+     * @param a Nodo
+     * @return numero con la altura
+     */
     public int ObtenerDeap(Nodo a){
         if(a==null){
             return -1;
@@ -20,6 +38,12 @@ public class ArbolAVL {
             return a.getBalance();
         }
     }
+
+    /**
+     * Metodo que se encarga de hacer una rotacion a la izquierda
+     * @param nodo Nodo de referencia
+     * @return Nodo raiz del segmento
+     */
     public Nodo rotacionIzquierda(Nodo nodo){
         Nodo aux = nodo.getIzquierdo();
         nodo.setIzquierdo(aux.getDerecho());
@@ -28,6 +52,11 @@ public class ArbolAVL {
         aux.setBalance(Math.max(ObtenerDeap(aux.getIzquierdo()),ObtenerDeap(aux.getDerecho()))+1);
         return aux;
     }
+    /**
+     * Metodo que se encarga de hacer una rotacion a la derecha
+     * @param nodo Nodo de referencia
+     * @return Nodo raiz del segmento
+     */
     public Nodo rotacionDerecha(Nodo nodo){
         Nodo aux = nodo.getDerecho();
         nodo.setDerecho(aux.getIzquierdo());
@@ -36,18 +65,34 @@ public class ArbolAVL {
         aux.setBalance(Math.max(ObtenerDeap(aux.getIzquierdo()),ObtenerDeap(aux.getDerecho()))+1);
         return aux;
     }
+    /**
+     * Metodo que se encarga de hacer una rotacion doble a la izquierda
+     * @param nodo Nodo de referencia
+     * @return Nodo raiz del segmento
+     */
     public Nodo rotacionDobleIzquierda(Nodo nodo){
         Nodo temp;
         nodo.setIzquierdo(rotacionDerecha(nodo.getIzquierdo()));
         temp = rotacionIzquierda(nodo);
         return temp;
     }
+    /**
+     * Metodo que se encarga de hacer una rotacion doble a la derecha.
+     * @param nodo Nodo de referencia
+     * @return Nodo raiz del segmento
+     */
     public Nodo rotacionDobleDerecha(Nodo nodo){
         Nodo temp;
         nodo.setDerecho(rotacionIzquierda(nodo.getDerecho()));
         temp = rotacionDerecha(nodo);
         return temp;
     }
+
+    /**
+     * Metodo que se llama para añadir un nodo
+     * @param palabra palabra del nodo
+     * @param ocurrencias lista de datos de la palabra
+     */
     public void addNodo(String palabra, String[] ocurrencias){
         Nodo nodo = new Nodo(palabra,ocurrencias);
         if(raiz == null){
@@ -56,6 +101,13 @@ public class ArbolAVL {
             raiz = incertar(nodo,raiz);
         }
     }
+
+    /**
+     * Metodo que se encarga de recorrer el arbol e incertar el lnodo en el respectivo lugar
+     * @param nuevo Nodo nuevo
+     * @param sub Nodo raiz de referencia por sub arboles.
+     * @return Nuevo nodo raiz del sub arbol.
+     */
     public Nodo incertar(Nodo nuevo,Nodo sub){
         Nodo nuevoPadre = sub;
         List<Nodo> palabras = new ArrayList<>();

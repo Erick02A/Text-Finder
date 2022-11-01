@@ -1,5 +1,8 @@
 package Client;
 
+/**
+ * Clase para el algoritmo de ordenamiento BubbleSort
+ */
 class BubbleSort
 {
     void bubbleSort(int arr[])

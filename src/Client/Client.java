@@ -87,6 +87,11 @@ public class Client extends javax.swing.JFrame{
 
 
     }
+
+    /**
+     * Metodo que inicializa el Jframe del cliente.
+     * @param title titulo de la ventana.
+     */
     public Client(String title){
         super (title);
 

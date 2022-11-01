@@ -1,11 +1,20 @@
 package Server;
 
+/**
+ * Clase que se encarda de generar los nodos para incertar en los arboles binarios.
+ */
 public class Nodo {
     private String palabra;
     private String[] ocurrencias;
     private Nodo izquierdo;
     private  Nodo derecho;
     private int deap;
+
+    /**
+     * Metodo constructor del nodo.
+     * @param palabra Palabra del Nodo.
+     * @param ocurrens lista del datos respecto la palabra.
+     */
     public Nodo(String palabra, String[] ocurrens){
         this.palabra = palabra;
         this.ocurrencias= ocurrens;

@@ -1,5 +1,8 @@
 package Client;
 
+/**
+ * Clase para el algoritmo de ordenamiento QuickSort.
+ */
 public class StringQuickSort {
 
     String names[];

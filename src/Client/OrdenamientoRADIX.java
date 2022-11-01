@@ -2,6 +2,9 @@ package Client;
 
 import java.util.Arrays;
 
+/**
+ * Clase para el algoritmo de ordenamiento RADIX sort.
+ */
 public class OrdenamientoRADIX {
 
     static int getMax(int arr[], int n)

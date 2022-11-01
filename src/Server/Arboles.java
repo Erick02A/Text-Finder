@@ -4,11 +4,24 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Clase que se encarga de generar los arboles binarios de busqueda.
+ */
 public class Arboles {
     private Nodo raiz;
+
+    /**
+     * Contructor del arbol.
+     */
     public Arboles(){
         this.raiz = null;
     }
+
+    /**
+     * Metodo que se encarga de recorrer el arbol y añadir el nuevo nodo donde corresponde.
+     * @param palabra Palabra del nodo.
+     * @param ocurrencias lista de datos de la palabra.
+     */
     public void addNodo(String palabra, String[] ocurrencias){
         Nodo nuevo = new Nodo(palabra,ocurrencias);
         if (raiz==null){
@@ -37,6 +50,11 @@ public class Arboles {
             }
         }
     }
+
+    /**
+     * Metodo para obtener la raizz del arbol
+     * @return Nodo raiz.
+     */
     public Nodo getRaiz(){
         return raiz;
     }

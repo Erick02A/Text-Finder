@@ -93,9 +93,9 @@ public class Server {
     }
 
     /**
-     * Metodo que se encarga de buscar una palabra que envie el cliente en los arboles que tenga ya guardados
-     * @param palabra la palabra a buscar
-     * @return
+     * Metodo que se encarga de buscar una palabra que envie el cliente en el arbol binario de busqueda.
+     * @param palabra la palabra a buscar.
+     * @return String comparaciones, String posicion, String Archivo.
      */
     public static String buscar_aux(String palabra){
         String mesage = "";
@@ -140,8 +140,13 @@ public class Server {
             mesage= "No encontrado";
         }
         return mesage;
-
     }
+
+    /**
+     * Metodo que se encarga de buscar la palabra en el arbolAVl y a la ves llama a buscar.
+     * @param palabra palabra a buscar.
+     * @return String comparaciones arbol y AVL, String posicion, String Archivo.
+     */
     public static String buscar(String palabra){
         String mesage2 = buscar_aux(palabra);
         String mesage = "";

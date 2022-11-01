@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+/**
+ * Clase que se encarga de crear la ventana y las partes donde se muestran los resultados de la busueda.
+ */
 public class Busqueda extends javax.swing.JFrame{
     private JPanel Panel2;
     private JTable table1;
@@ -14,26 +17,24 @@ public class Busqueda extends javax.swing.JFrame{
     private JButton Abrir;
     private static String Dato;
     private static JFrame frame;
-
     public static void main(String[] args){
         frame = new Busqueda("Text Finder", Client.getPalabra());
         frame.setVisible(true);
     }
 
+    /**
+     * Metodo que se encarga de inicialkizar el Jframe
+     * @param title titulo de la ventana
+     * @param Datos daos a mostrar
+     */
     public Busqueda(String title,String Datos) {
         super(title);
-
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(Panel2);
         this.pack();
         Dato = Datos;
-
         System.out.println("Prueba: " + Datos);
-
-
-
         createTable();
-
         //table1.addColumn("Nombre del archivo");
         ButtonVolver.addActionListener(new ActionListener() {
             @Override
@@ -47,22 +48,18 @@ public class Busqueda extends javax.swing.JFrame{
         Abrir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 String[] finds = Datos.split("¬");
                 String url = "";
                 int i = 0;
                 boolean f = true;
-
                 while(f) {
                     if (i == (table1.getSelectedRow())) {
                         String[] dats = finds[i].split(",");
-                        url = dats[4];
+                        url = dats[3];
                         f = false;
                     }
                     i++;
                 }
-
-
                 ProcessBuilder p = new ProcessBuilder();
                 p.command("cmd.exe","/c",url);
                 try {
@@ -72,10 +69,12 @@ public class Busqueda extends javax.swing.JFrame{
                 }
             }
         });
-
     }
-    public void createTable(){
 
+    /**
+     * Metodo que rellena el Jtable con los datos.
+     */
+    public void createTable(){
         String[] finds = Dato.split("¬");
         Object[][] data = new Object[finds.length][4];
         for (int i=0;i<finds.length;i++) {
@@ -84,16 +83,10 @@ public class Busqueda extends javax.swing.JFrame{
             data[i][2] = dats[1];
             data[i][1] = dats[2];
             data[i][0] = dats[3];
-
         }
         table1.setModel(new DefaultTableModel(
                 data,
-                new String[]{"Nombre del pdf","Posicion de la palabra","Comparaciones arbol","Cmparaciones AVL"}
-
+                new String[]{"Archivo","Posicion","arbolBin","arbolAVL"}
         ));
     }
-
-
-
-
 }

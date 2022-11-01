@@ -10,7 +10,7 @@ public class StringQuickSort {
 
     public static void main(String[] args) {
         StringQuickSort sorter = new StringQuickSort();
-        String words[] = {"zora", "aandres", "andres", "aaandres", "erick", "aurelio", "ll"}; // the strings need to be sorted are put inside this array
+        String words[] = {"zora", "aandres", "andres", "aaandres", "erick", "aurelio", "ll","34","33","-23","a-3d?"}; // the strings need to be sorted are put inside this array
         sorter.sort(words);
 
         for (String i : words) {
@@ -62,4 +62,5 @@ public class StringQuickSort {
         this.names[i] = this.names[j];
         this.names[j] = temp;
     }
+
 }
